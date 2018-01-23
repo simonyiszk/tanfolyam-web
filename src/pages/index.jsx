@@ -32,15 +32,13 @@ const CoursesPage = () => (
         Keresés a tanfolyamok között
       </h2>
       <form>
-        <h3>Milyen szakra jársz?</h3>
-        <RadioButtonGroup name="programme">
+        <RadioButtonGroup name="programme" legend="Milyen szakra jársz?">
           <RadioButton value="computerEngineering" label="Mérnökinformatikus" />
           <RadioButton value="electricalEngineering" label="Villamosmérnök" />
           <RadioButton value="other" label="Egyéb" />
         </RadioButtonGroup>
 
-        <h3>Melyik évben kezdtél?</h3>
-        <RadioButtonGroup name="startYear">
+        <RadioButtonGroup name="startYear" legend="Melyik évben kezdtél?">
           <RadioButton value="2017" />
           <RadioButton value="2016" />
           <RadioButton value="2015" />

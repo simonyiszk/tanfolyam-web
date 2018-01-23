@@ -47,9 +47,11 @@ const IndexLayout = ({ children, data }) => (
     `}
   >
     <Helmet
-      defaultTitle={data.site.siteMetadata.title}
       titleTemplate={`%s | ${data.site.siteMetadata.title}`}
+      defaultTitle={data.site.siteMetadata.title}
     >
+      <html lang="hu" />
+
       <link
         href="https://fonts.googleapis.com/css?family=Montserrat"
         rel="stylesheet"

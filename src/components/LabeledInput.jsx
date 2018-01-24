@@ -5,8 +5,8 @@ const LabeledInput = ({
   id, type, name, value, label, ...props
 }) => (
   <label htmlFor={id}>
-    <input id={id} type={type} name={name} value={value} {...props} />
     {label}
+    <input id={id} type={type} name={name} value={value} {...props} />
   </label>
 );
 

@@ -17,14 +17,13 @@ class CoursesPage extends React.Component {
 
     const { data } = props;
 
-    this.allTags = Object.entries(data.courses.edges.reduce((accumulator, { node }) => {
+    this.allTags = Array.from(data.courses.edges.reduce((accumulator, { node }) => {
       // Count the global occurrence of each tag
       node.frontmatter.tags.forEach((tag) => {
-        // eslint-disable-next-line no-param-reassign
-        accumulator[tag] = (accumulator[tag] || 0) + 1;
+        accumulator.set(tag, (accumulator.get(tag) || 0) + 1);
       });
       return accumulator;
-    }, {}))
+    }, new Map()))
       .sort(([tag1, occurrenceCount1], [tag2, occurrenceCount2]) =>
         // Sort tags by occurrence count (descending) and then by name (ascending)
         (occurrenceCount1 !== occurrenceCount2

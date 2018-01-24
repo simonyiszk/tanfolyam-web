@@ -1,8 +1,8 @@
 import React from 'react';
 import Helmet from 'react-helmet';
 import Container from '../components/Container';
+import InputGroup from '../components/InputGroup';
 import RadioButton from '../components/RadioButton';
-import RadioButtonGroup from '../components/RadioButtonGroup';
 
 const CoursesPage = () => (
   <div>
@@ -32,18 +32,18 @@ const CoursesPage = () => (
         Keresés a tanfolyamok között
       </h2>
       <form>
-        <RadioButtonGroup name="programme" legend="Milyen szakra jársz?">
+        <InputGroup name="programme" legend="Milyen szakra jársz?">
           <RadioButton value="computerEngineering" label="Mérnökinformatikus" />
           <RadioButton value="electricalEngineering" label="Villamosmérnök" />
           <RadioButton value="other" label="Egyéb" />
-        </RadioButtonGroup>
+        </InputGroup>
 
-        <RadioButtonGroup name="startYear" legend="Melyik évben kezdtél?">
+        <InputGroup name="startYear" legend="Melyik évben kezdtél?">
           <RadioButton value="2017" />
           <RadioButton value="2016" />
           <RadioButton value="2015" />
           <RadioButton value="other" label="Egyéb" />
-        </RadioButtonGroup>
+        </InputGroup>
 
         <h3>Milyen témakörök iránt érdeklődsz?</h3>
         <div>TODO</div>

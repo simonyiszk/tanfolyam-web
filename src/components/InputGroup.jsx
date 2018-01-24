@@ -1,28 +1,28 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 
-const RadioButtonGroup = ({
+const InputGroup = ({
   name, legend, children, ...props
 }) => (
   <fieldset {...props}>
-    {legend && <legend>{legend}</legend>}
+    {legend != null && <legend>{legend}</legend>}
 
-    {React.Children.map(children, (radioButton, i) =>
-      React.cloneElement(radioButton, {
-        id: `${name}Choice${i}`,
+    {React.Children.map(children, (input, i) =>
+      React.cloneElement(input, {
+        id: `${name}__${i}`,
         name,
       }))}
   </fieldset>
 );
 
-RadioButtonGroup.propTypes = {
+InputGroup.propTypes = {
   name: PropTypes.string.isRequired,
   legend: PropTypes.string,
   children: PropTypes.arrayOf(PropTypes.element).isRequired,
 };
 
-RadioButtonGroup.defaultProps = {
+InputGroup.defaultProps = {
   legend: undefined,
 };
 
-export default RadioButtonGroup;
+export default InputGroup;

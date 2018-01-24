@@ -2,22 +2,22 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import LabeledInput from './LabeledInput';
 
-const RadioButton = ({ value, label, ...props }) => (
+const Checkbox = ({ value, label, ...props }) => (
   <LabeledInput
-    type="radio"
+    type="checkbox"
     value={value}
     label={label != null ? label : value}
     {...props}
   />
 );
 
-RadioButton.propTypes = {
+Checkbox.propTypes = {
   value: PropTypes.string.isRequired,
   label: PropTypes.string,
 };
 
-RadioButton.defaultProps = {
+Checkbox.defaultProps = {
   label: undefined,
 };
 
-export default RadioButton;
+export default Checkbox;

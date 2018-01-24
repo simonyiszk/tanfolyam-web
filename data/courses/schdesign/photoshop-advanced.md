@@ -1,5 +1,5 @@
 ---
-name: Photoshop haladóknak
+title: Photoshop haladóknak
 tags:
   - design
   - grafika

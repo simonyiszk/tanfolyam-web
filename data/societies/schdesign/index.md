@@ -1,3 +1,3 @@
 ---
-name: Schönherz Design Stúdió
+title: Schönherz Design Stúdió
 ---

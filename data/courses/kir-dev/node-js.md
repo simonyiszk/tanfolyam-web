@@ -1,5 +1,5 @@
 ---
-name: Node.js alapok
+title: Node.js alapok
 date: 2018-04-21
 instructors:
   - Király Bálint

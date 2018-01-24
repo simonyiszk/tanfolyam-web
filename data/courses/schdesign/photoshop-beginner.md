@@ -1,5 +1,5 @@
 ---
-name: Photoshop kezdőknek
+title: Photoshop kezdőknek
 date: 2018-03-10
 instructors:
   - Wéber Ádám

@@ -1,5 +1,5 @@
 ---
-name: Modern webfejlesztés
+title: Modern webfejlesztés
 date: 2018-04-19
 instructors:
   - Körmendy Bertalan

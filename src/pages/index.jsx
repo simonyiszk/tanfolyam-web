@@ -151,7 +151,36 @@ class CoursesPage extends React.Component {
                   this.state.searchTerms.includes(tag)))
               .map(({ node }) => (
                 // TODO: Add society name to the key
-                <div key={node.frontmatter.title}>{node.frontmatter.title}</div>
+                <div key={node.frontmatter.title}>
+                  <h3>{node.frontmatter.title}</h3>
+                  <ul
+                    className={css`
+                      list-style-type: none;
+                      padding: 0;
+                    `}
+                  >
+                    {node.frontmatter.date != null && (
+                      <li>
+                        <span role="img" aria-label="időpont">
+                          🕓
+                        </span>{' '}
+                        {node.frontmatter.date}
+                      </li>
+                    )}
+                    {node.frontmatter.instructors != null && (
+                      <li>
+                        <span role="img" aria-label="oktató(k)">
+                          🎓
+                        </span>{' '}
+                        {node.frontmatter.instructors.join(', ')}
+                      </li>
+                    )}
+                  </ul>
+                  <div
+                    // eslint-disable-next-line react/no-danger
+                    dangerouslySetInnerHTML={{ __html: node.html }}
+                  />
+                </div>
               ))}
           </div>
         </Container>
@@ -175,8 +204,11 @@ export const query = graphql`
         node {
           frontmatter {
             title
+            date(formatString: "LL", locale: "hu")
+            instructors
             tags
           }
+          html
         }
       }
     }

@@ -1,9 +1,9 @@
 import PropTypes from 'prop-types';
 import React from 'react';
-import LabeledInput from './LabeledInput';
+import PostLabeledInput from './PostLabeledInput';
 
 const Checkbox = ({ value, label, ...props }) => (
-  <LabeledInput
+  <PostLabeledInput
     type="checkbox"
     value={value}
     label={label != null ? label : value}
@@ -17,7 +17,7 @@ Checkbox.propTypes = {
 };
 
 Checkbox.defaultProps = {
-  label: undefined,
+  label: null,
 };
 
 export default Checkbox;

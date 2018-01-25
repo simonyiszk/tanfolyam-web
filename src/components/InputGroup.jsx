@@ -9,7 +9,7 @@ const InputGroup = ({
 
     {React.Children.map(children, (input, i) =>
       React.cloneElement(input, {
-        id: `${name}__${i}`,
+        id: input.props.id != null ? input.props.id : `${name}__${i}`,
         name,
       }))}
   </fieldset>
@@ -22,7 +22,7 @@ InputGroup.propTypes = {
 };
 
 InputGroup.defaultProps = {
-  legend: undefined,
+  legend: null,
 };
 
 export default InputGroup;

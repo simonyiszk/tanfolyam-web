@@ -17,7 +17,7 @@
   logo: ../static/assets/logos/sds.svg # TODO: Update source file
   website: http://schdesign.hu
 - id: Schönherz Elektronikai Műhely
-  logo: ../static/assets/logos/sem.svg # TODO: Update source file
+  logo: ../static/assets/logos/sem.svg
   website: https://sem.sch.bme.hu
 - id: SPOT
   logo: ../static/assets/logos/spot.svg

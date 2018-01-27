@@ -152,6 +152,10 @@ class CoursesPage extends React.Component {
               .map(({ node }) => (
                 // TODO: Add society name to the key
                 <div key={node.frontmatter.title}>
+                  <img
+                    src={`/${node.frontmatter.society.logo.relativePath}`}
+                    alt={`${node.frontmatter.society.id} logó`}
+                  />
                   <h3>{node.frontmatter.title}</h3>
                   <ul
                     className={css`
@@ -204,6 +208,12 @@ export const query = graphql`
         node {
           frontmatter {
             title
+            society {
+              id
+              logo {
+                relativePath
+              }
+            }
             date(formatString: "LL", locale: "hu")
             instructors
             tags

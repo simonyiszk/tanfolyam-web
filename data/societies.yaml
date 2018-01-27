@@ -1,0 +1,16 @@
+- id: AC Studio & Live
+  logo: ../static/assets/logos/ac.svg
+- id: Budavári Schönherz Stúdió
+  logo: ../static/assets/logos/bss.svg
+- id: HA5KFU
+  logo: ../static/assets/logos/ha5kfu.svg
+- id: KIR fejlesztők és üzemeltetők
+  logo: ../static/assets/logos/kir-dev.svg # TODO: Update source file
+- id: Lego kör
+  logo: ../static/assets/logos/lego.svg
+- id: Schönherz Design Stúdió
+  logo: ../static/assets/logos/sds.svg # TODO: Update source file
+- id: Schönherz Elektronikai Műhely
+  logo: ../static/assets/logos/sem.svg # TODO: Update source file
+- id: SPOT
+  logo: ../static/assets/logos/spot.svg

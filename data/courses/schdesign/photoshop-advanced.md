@@ -1,5 +1,6 @@
 ---
 title: Photoshop haladóknak
+society: Schönherz Design Stúdió
 tags:
   - design
   - grafika

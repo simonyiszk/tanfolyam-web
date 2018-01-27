@@ -1,5 +1,6 @@
 ---
 title: Photoshop kezdőknek
+society: Schönherz Design Stúdió
 date: 2018-03-10
 instructors:
   - Wéber Ádám

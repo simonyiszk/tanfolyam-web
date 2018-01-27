@@ -1,5 +1,6 @@
 ---
 title: Node.js alapok
+society: KIR fejlesztők és üzemeltetők
 date: 2018-04-21
 instructors:
   - Király Bálint

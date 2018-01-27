@@ -1,3 +1,0 @@
----
-title: Schönherz Design Stúdió
----

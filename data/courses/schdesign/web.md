@@ -1,5 +1,6 @@
 ---
 title: Modern webfejlesztés
+society: Schönherz Design Stúdió
 date: 2018-04-19
 instructors:
   - Körmendy Bertalan

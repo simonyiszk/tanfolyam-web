@@ -8,7 +8,7 @@
   logo: ../static/assets/logos/ha5kfu.svg
   website: http://ha5kfu.sch.bme.hu
 - id: KIR fejlesztők és üzemeltetők
-  logo: ../static/assets/logos/kir-dev.svg # TODO: Update source file
+  logo: ../static/assets/logos/kir-dev.svg
   website: http://kir-dev.sch.bme.hu
 - id: Lego kör
   logo: ../static/assets/logos/lego.svg

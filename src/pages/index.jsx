@@ -150,13 +150,18 @@ class CoursesPage extends React.Component {
                 node.frontmatter.tags.some(tag =>
                   this.state.searchTerms.includes(tag)))
               .map(({ node }) => (
-                // TODO: Add society name to the key
-                <div key={node.frontmatter.title}>
+                <article
+                  key={`${node.frontmatter.society.id}__${
+                    node.frontmatter.title
+                  }`}
+                >
                   <img
                     src={`/${node.frontmatter.society.logo.relativePath}`}
                     alt={`${node.frontmatter.society.id} logó`}
                   />
+
                   <h3>{node.frontmatter.title}</h3>
+
                   <ul
                     className={css`
                       list-style-type: none;
@@ -171,6 +176,7 @@ class CoursesPage extends React.Component {
                         {node.frontmatter.date}
                       </li>
                     )}
+
                     {node.frontmatter.instructors != null && (
                       <li>
                         <span role="img" aria-label="oktató(k)">
@@ -179,12 +185,32 @@ class CoursesPage extends React.Component {
                         {node.frontmatter.instructors.join(', ')}
                       </li>
                     )}
+
+                    {node.frontmatter.society.website != null && (
+                      <li>
+                        <span role="img" aria-label="weboldal">
+                          🌐
+                        </span>{' '}
+                        <a
+                          href={node.frontmatter.society.website}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          {/* Show the URL without protocol */}
+                          {node.frontmatter.society.website.replace(
+                            /(^\w+:|^)\/\//,
+                            '',
+                          )}
+                        </a>
+                      </li>
+                    )}
                   </ul>
+
                   <div
                     // eslint-disable-next-line react/no-danger
                     dangerouslySetInnerHTML={{ __html: node.html }}
                   />
-                </div>
+                </article>
               ))}
           </div>
         </Container>
@@ -213,6 +239,7 @@ export const query = graphql`
               logo {
                 relativePath
               }
+              website
             }
             date(formatString: "LL", locale: "hu")
             instructors

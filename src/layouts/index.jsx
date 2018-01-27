@@ -37,6 +37,17 @@ injectGlobal`
   p {
     line-height: 1.5;
   }
+
+  fieldset {
+    padding: 0;
+    border: 0;
+    margin: 0 0 1.33em 0;
+
+    legend {
+      font-weight: bold;
+      margin: 1.33em 0;
+    }
+  }
 `;
 
 const IndexLayout = ({ children, data }) => (

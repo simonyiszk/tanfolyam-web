@@ -3,12 +3,15 @@ import React from 'react';
 import { css, injectGlobal } from 'react-emotion';
 import Helmet from 'react-helmet';
 
-import 'normalize.css';
+// eslint-disable-next-line import/no-webpack-loader-syntax, import/no-unresolved
+import normalizeCSS from '!raw-loader!normalize.css';
 
 import Container from '../components/Container';
 
 // eslint-disable-next-line no-unused-expressions
 injectGlobal`
+  ${normalizeCSS}
+
   body {
     box-sizing: border-box;
     font-family: Montserrat, sans-serif;
@@ -22,7 +25,7 @@ injectGlobal`
   }
 
   a {
-    color: #03a9f4;
+    color: #0288d1;
     text-decoration: none;
 
     &:hover {
@@ -39,7 +42,7 @@ injectGlobal`
   }
 
   fieldset {
-    padding: 0 !important;
+    padding: 0;
     border: 0;
     margin: 0 0 1.33em 0;
 

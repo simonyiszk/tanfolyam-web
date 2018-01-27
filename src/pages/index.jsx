@@ -155,58 +155,106 @@ class CoursesPage extends React.Component {
                     node.frontmatter.title
                   }`}
                 >
-                  <img
-                    src={`/${node.frontmatter.society.logo.relativePath}`}
-                    alt={`${node.frontmatter.society.id} logó`}
-                  />
-
-                  <h3>{node.frontmatter.title}</h3>
-
-                  <ul
+                  <div
                     className={css`
-                      list-style-type: none;
-                      padding: 0;
+                      display: flex;
+                      justify-content: space-between;
+                      align-items: center;
                     `}
                   >
-                    {node.frontmatter.date != null && (
-                      <li>
-                        <span role="img" aria-label="időpont">
-                          🕓
-                        </span>{' '}
-                        {node.frontmatter.date}
-                      </li>
-                    )}
+                    <div>
+                      <h3>{node.frontmatter.title}</h3>
 
-                    {node.frontmatter.instructors != null && (
-                      <li>
-                        <span role="img" aria-label="oktató(k)">
-                          🎓
-                        </span>{' '}
-                        {node.frontmatter.instructors.join(', ')}
-                      </li>
-                    )}
+                      <ul
+                        className={css`
+                          position: relative;
+                          list-style: none;
+                          padding-left: 1.75em;
+                          line-height: 1.5;
 
-                    {node.frontmatter.society.website != null && (
-                      <li>
-                        <span role="img" aria-label="weboldal">
-                          🌐
-                        </span>{' '}
-                        <a
-                          href={node.frontmatter.society.website}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                        >
-                          {/* Show the URL without protocol */}
-                          {node.frontmatter.society.website.replace(
-                            /(^\w+:|^)\/\//,
-                            '',
-                          )}
-                        </a>
-                      </li>
-                    )}
-                  </ul>
+                          li::before {
+                            position: absolute;
+                            left: 0;
+                          }
+                        `}
+                      >
+                        {node.frontmatter.date != null && (
+                          <li
+                            className={css`
+                              ::before {
+                                content: '🕓';
+                              }
+                            `}
+                          >
+                            <span aria-label="Időpont: " />
+                            {node.frontmatter.date}
+                          </li>
+                        )}
+
+                        {node.frontmatter.instructors != null && (
+                          <li
+                            className={css`
+                              ::before {
+                                content: '🎓';
+                              }
+                            `}
+                          >
+                            <span
+                              aria-label={`${
+                                node.frontmatter.instructors.length <= 1
+                                  ? 'Oktató'
+                                  : 'Oktatók'
+                              }: `}
+                            />
+                            {node.frontmatter.instructors.join(', ')}
+                          </li>
+                        )}
+
+                        {node.frontmatter.society.website != null && (
+                          <li
+                            className={css`
+                              ::before {
+                                content: '🌐';
+                              }
+                            `}
+                          >
+                            <span aria-label="A kör weboldala: " />
+                            <a
+                              href={node.frontmatter.society.website}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                            >
+                              {/* Show the URL without protocol */}
+                              {node.frontmatter.society.website.replace(
+                                /(^\w+:|^)\/\//,
+                                '',
+                              )}
+                            </a>
+                          </li>
+                        )}
+                      </ul>
+                    </div>
+
+                    <img
+                      src={`/${node.frontmatter.society.logo.relativePath}`}
+                      alt={`${node.frontmatter.society.id} logó`}
+                      className={css`
+                        width: 4em;
+                        margin-left: 2rem;
+                      `}
+                    />
+                  </div>
 
                   <div
+                    className={css`
+                      > :first-child {
+                        margin-top: 0;
+                      }
+
+                      > :last-child {
+                        margin-bottom: 0;
+                      }
+                    `}
                     // eslint-disable-next-line react/no-danger
                     dangerouslySetInnerHTML={{ __html: node.html }}
                   />

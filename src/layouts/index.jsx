@@ -39,7 +39,7 @@ injectGlobal`
   }
 
   fieldset {
-    padding: 0;
+    padding: 0 !important;
     border: 0;
     margin: 0 0 1.33em 0;
 

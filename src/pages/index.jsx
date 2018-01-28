@@ -2,7 +2,8 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import { css } from 'react-emotion';
 import Helmet from 'react-helmet';
-import Checkbox from '../components/Checkbox';
+import Select from 'react-select';
+import 'react-select/dist/react-select.css';
 import Container from '../components/Container';
 import MultipleChoiceInputGroup from '../components/MultipleChoiceInputGroup';
 import RadioButton from '../components/RadioButton';
@@ -36,23 +37,18 @@ class CoursesPage extends React.Component {
         tag);
   }
 
-  handleSearchTermsChange({ target }) {
-    const { checked, value } = target;
-
-    if (checked) {
-      this.setState(prevState => ({
-        searchTerms: [...prevState.searchTerms, value],
-      }));
-    } else {
-      this.setState(prevState => ({
-        searchTerms: prevState.searchTerms.filter(searchTerm => searchTerm !== value),
-      }));
-    }
+  handleSearchTermsChange(value) {
+    this.setState({
+      searchTerms: value,
+    });
   }
 
   render() {
     const { data } = this.props;
     const { allTags } = this;
+    const { searchTerms } = this.state;
+
+    const searchTermValues = searchTerms.map(({ value }) => value);
 
     return (
       <Container>
@@ -135,13 +131,16 @@ class CoursesPage extends React.Component {
                 <RadioButton value="other" label="Egyéb" />
               </MultipleChoiceInputGroup>
 
-              <MultipleChoiceInputGroup
-                name="searchTerms"
-                legend="Milyen témakörök iránt érdeklődsz?"
-                onChange={this.handleSearchTermsChange}
-              >
-                {allTags.map(tag => <Checkbox key={tag} value={tag} />)}
-              </MultipleChoiceInputGroup>
+              <fieldset>
+                <legend>Milyen témakörök iránt érdeklődsz?</legend>
+
+                <Select
+                  multi
+                  options={allTags.map(tag => ({ value: tag, label: tag }))}
+                  value={searchTerms}
+                  onChange={this.handleSearchTermsChange}
+                />
+              </fieldset>
             </form>
           </div>
         </div>
@@ -151,8 +150,7 @@ class CoursesPage extends React.Component {
             .filter(({ node }) =>
               // Show every course which has at least one of the desired tags
               // TODO: Sort results by relevance
-              node.frontmatter.tags.some(tag =>
-                this.state.searchTerms.includes(tag)))
+              node.frontmatter.tags.some(tag => searchTermValues.includes(tag)))
             .map(({ node }) => (
               <article
                 key={`${node.frontmatter.society.id}__${

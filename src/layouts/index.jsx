@@ -134,7 +134,7 @@ const IndexLayout = ({ children, data }) => (
             margin: 0 auto;
             max-width: 12em;
 
-            & a {
+            a {
               margin: 0.5em;
             }
           `}

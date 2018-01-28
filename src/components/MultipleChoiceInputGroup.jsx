@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 
-const InputGroup = ({
+const MultipleChoiceInputGroup = ({
   name, legend, children, ...props
 }) => (
   <fieldset {...props}>
@@ -15,14 +15,14 @@ const InputGroup = ({
   </fieldset>
 );
 
-InputGroup.propTypes = {
+MultipleChoiceInputGroup.propTypes = {
   name: PropTypes.string.isRequired,
   legend: PropTypes.string,
   children: PropTypes.arrayOf(PropTypes.element).isRequired,
 };
 
-InputGroup.defaultProps = {
+MultipleChoiceInputGroup.defaultProps = {
   legend: null,
 };
 
-export default InputGroup;
+export default MultipleChoiceInputGroup;

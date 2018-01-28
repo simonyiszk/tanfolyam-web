@@ -4,7 +4,7 @@ import { css } from 'react-emotion';
 import Helmet from 'react-helmet';
 import Checkbox from '../components/Checkbox';
 import Container from '../components/Container';
-import InputGroup from '../components/InputGroup';
+import MultipleChoiceInputGroup from '../components/MultipleChoiceInputGroup';
 import RadioButton from '../components/RadioButton';
 import { mediaQueries } from '../utils/media-queries';
 
@@ -78,6 +78,7 @@ class CoursesPage extends React.Component {
               </span>{' '}
               Tanfolyamjainkról
             </h2>
+
             <p>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
               eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
@@ -109,7 +110,10 @@ class CoursesPage extends React.Component {
                 }
               `}
             >
-              <InputGroup name="programme" legend="Milyen szakra jársz?">
+              <MultipleChoiceInputGroup
+                name="programme"
+                legend="Milyen szakra jársz?"
+              >
                 <RadioButton
                   value="computerEngineering"
                   label="Mérnökinformatikus"
@@ -119,22 +123,25 @@ class CoursesPage extends React.Component {
                   label="Villamosmérnök"
                 />
                 <RadioButton value="other" label="Egyéb" />
-              </InputGroup>
+              </MultipleChoiceInputGroup>
 
-              <InputGroup name="startYear" legend="Melyik évben kezdtél?">
+              <MultipleChoiceInputGroup
+                name="startYear"
+                legend="Melyik évben kezdtél?"
+              >
                 <RadioButton value="2017" />
                 <RadioButton value="2016" />
                 <RadioButton value="2015" />
                 <RadioButton value="other" label="Egyéb" />
-              </InputGroup>
+              </MultipleChoiceInputGroup>
 
-              <InputGroup
+              <MultipleChoiceInputGroup
                 name="searchTerms"
                 legend="Milyen témakörök iránt érdeklődsz?"
                 onChange={this.handleSearchTermsChange}
               >
                 {allTags.map(tag => <Checkbox key={tag} value={tag} />)}
-              </InputGroup>
+              </MultipleChoiceInputGroup>
             </form>
           </div>
         </div>

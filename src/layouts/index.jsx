@@ -1,3 +1,4 @@
+import Img from 'gatsby-image';
 import PropTypes from 'prop-types';
 import React from 'react';
 import { css, injectGlobal } from 'react-emotion';
@@ -10,6 +11,7 @@ import FaYouTubePlay from 'react-icons/lib/fa/youtube-play';
 // eslint-disable-next-line import/no-webpack-loader-syntax, import/no-unresolved
 import normalizeCSS from '!raw-loader!normalize.css';
 
+import SimonyiLightLogoSrc from '../../static/assets/logos/simonyi-light.svg';
 import Container from '../components/Container';
 
 // eslint-disable-next-line no-unused-expressions
@@ -79,7 +81,32 @@ const IndexLayout = ({ children, data }) => (
       <meta name="viewport" content="width=device-width, initial-scale=1" />
     </Helmet>
 
-    {/* TODO: A navigation bar inside a HTML `<header>` element */}
+    <header>
+      {/* Hero image with branding */}
+      <div
+        className={css`
+          position: relative;
+        `}
+      >
+        <Img
+          sizes={data.simonyiClubRoom.childImageSharp.sizes}
+          className={css`
+            filter: brightness(0.5);
+          `}
+        />
+        <img
+          src={SimonyiLightLogoSrc}
+          alt=""
+          className={css`
+            position: absolute;
+            width: 50%;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+          `}
+        />
+      </div>
+    </header>
 
     <main
       className={css`
@@ -160,6 +187,16 @@ export const query = graphql`
         siteFacebookURL
         siteYouTubeURL
         siteGitHubURL
+      }
+    }
+
+    simonyiClubRoom: file(
+      relativePath: { eq: "assets/pictures/simonyi-club-room.jpeg" }
+    ) {
+      childImageSharp {
+        sizes(maxWidth: 1920, maxHeight: 480, cropFocus: CENTER) {
+          ...GatsbyImageSharpSizes
+        }
       }
     }
   }

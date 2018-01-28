@@ -96,7 +96,7 @@ const IndexLayout = ({ children, data }) => (
         />
         <img
           src={SimonyiLightLogoSrc}
-          alt=""
+          alt={data.site.siteMetadata.title}
           className={css`
             position: absolute;
             width: 50%;

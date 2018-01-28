@@ -1,6 +1,10 @@
 module.exports = {
   siteMetadata: {
     title: 'Simonyi Károly Szakkollégium',
+    siteEmailURL: 'mailto:info@simonyi.bme.hu',
+    siteFacebookURL: 'https://facebook.com/simonyiszk',
+    siteYouTubeURL: 'https://youtube.com/user/SimonyiSzakkoli',
+    siteGitHubURL: 'https://github.com/simonyiszk/tanfolyam-web',
   },
   mapping: {
     'MarkdownRemark.frontmatter.society': 'SocietiesYaml',

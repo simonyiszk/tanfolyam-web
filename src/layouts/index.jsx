@@ -2,6 +2,10 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import { css, injectGlobal } from 'react-emotion';
 import Helmet from 'react-helmet';
+import FaEnvelope from 'react-icons/lib/fa/envelope';
+import FaFacebookOfficial from 'react-icons/lib/fa/facebook-official';
+import FaGitHub from 'react-icons/lib/fa/github';
+import FaYouTubePlay from 'react-icons/lib/fa/youtube-play';
 
 // eslint-disable-next-line import/no-webpack-loader-syntax, import/no-unresolved
 import normalizeCSS from '!raw-loader!normalize.css';
@@ -85,8 +89,57 @@ const IndexLayout = ({ children, data }) => (
       {children()}
     </main>
 
-    <footer>
-      <Container>TODO: Footer</Container>
+    <footer
+      className={css`
+        background: #263238;
+        color: white;
+        text-align: center;
+        font-size: 2em;
+        padding: 0.5em 0;
+      `}
+    >
+      <Container>
+        <div
+          className={css`
+            display: flex;
+            justify-content: space-between;
+            margin: 0 auto;
+            max-width: 12em;
+
+            & a {
+              margin: 0.5em;
+            }
+          `}
+        >
+          <a
+            href={data.site.siteMetadata.siteFacebookURL}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <FaFacebookOfficial />
+          </a>
+
+          <a
+            href={data.site.siteMetadata.siteYouTubeURL}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <FaYouTubePlay />
+          </a>
+
+          <a
+            href={data.site.siteMetadata.siteGitHubURL}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <FaGitHub />
+          </a>
+
+          <a href={data.site.siteMetadata.siteEmailURL}>
+            <FaEnvelope />
+          </a>
+        </div>
+      </Container>
     </footer>
   </div>
 );
@@ -103,6 +156,10 @@ export const query = graphql`
     site {
       siteMetadata {
         title
+        siteEmailURL
+        siteFacebookURL
+        siteYouTubeURL
+        siteGitHubURL
       }
     }
   }

@@ -111,6 +111,7 @@ const IndexLayout = ({ children, data }) => (
     <main
       className={css`
         flex: 1;
+        margin-bottom: 1em;
       `}
     >
       {children()}

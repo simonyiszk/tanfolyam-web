@@ -1,10 +1,11 @@
 import React from 'react';
+import Container from '../components/Container';
 
 const NotFoundPage = () => (
-  <div>
+  <Container>
     <h1>Az oldal nem található</h1>
     <p>A kért oldal jelenleg nem elérhető vagy nem létezik.</p>
-  </div>
+  </Container>
 );
 
 export default NotFoundPage;

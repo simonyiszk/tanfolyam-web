@@ -1,7 +1,9 @@
+import Img from 'gatsby-image';
 import PropTypes from 'prop-types';
 import React from 'react';
 import { css } from 'react-emotion';
 import Helmet from 'react-helmet';
+import SimonyiLightLogoSrc from '../../static/assets/logos/simonyi-light.svg';
 import Checkbox from '../components/Checkbox';
 import Container from '../components/Container';
 import InputGroup from '../components/InputGroup';
@@ -58,7 +60,29 @@ class CoursesPage extends React.Component {
       <div>
         <Helmet title="Tanfolyamok" />
 
-        {/* TODO: Hero image */}
+        <div
+          className={css`
+            position: relative;
+          `}
+        >
+          <Img
+            sizes={data.simonyiClubRoom.childImageSharp.sizes}
+            className={css`
+              filter: brightness(0.5);
+            `}
+          />
+          <img
+            src={SimonyiLightLogoSrc}
+            alt=""
+            className={css`
+              position: absolute;
+              width: 50%;
+              top: 50%;
+              left: 50%;
+              transform: translate(-50%, -50%);
+            `}
+          />
+        </div>
 
         <Container>
           <div
@@ -294,6 +318,16 @@ export const query = graphql`
             tags
           }
           html
+        }
+      }
+    }
+
+    simonyiClubRoom: file(
+      relativePath: { eq: "assets/pictures/simonyi-club-room.jpeg" }
+    ) {
+      childImageSharp {
+        sizes(maxWidth: 1920, maxHeight: 480, cropFocus: CENTER) {
+          ...GatsbyImageSharpSizes
         }
       }
     }

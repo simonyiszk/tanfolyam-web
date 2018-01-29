@@ -262,6 +262,35 @@ class CoursesPage extends React.Component {
                   // eslint-disable-next-line react/no-danger
                   dangerouslySetInnerHTML={{ __html: node.html }}
                 />
+                <div
+                  className={css`
+                    display: flex;
+                    justify-content: flex-end;
+                  `}
+                >
+                  <a
+                    href={node.frontmatter.applicationFormURL}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className={css`
+                      display: inline-block;
+                      border: .2rem black solid;
+                      width: 9em;
+                      margin-right: 1rem;
+                      text-align: center;
+                      color:black;
+                      line-height: 2;
+                      font-weight: bold;
+                      text-decoration: none;
+
+                      & :hover {
+                        text-decoration: none;
+                      }
+                    `}
+                  >
+                    Jelentkezés
+                  </a>
+                </div>
               </article>
             ))}
         </div>
@@ -294,6 +323,7 @@ export const query = graphql`
             }
             date(formatString: "LL", locale: "hu")
             instructors
+            applicationFormURL
             tags
           }
           html

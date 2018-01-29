@@ -5,6 +5,7 @@ date: 2018-04-19
 instructors:
   - Körmendy Bertalan
   - Poduszló Kristóf
+applicationFormURL: http://schdesign.hu
 tags:
   - web
   - frontend

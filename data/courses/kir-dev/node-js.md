@@ -4,6 +4,7 @@ society: KIR fejlesztők és üzemeltetők
 date: 2018-04-21
 instructors:
   - Király Bálint
+applicationFormURL: http://kir-dev.sch.bme.hu
 tags:
   - web
   - backend

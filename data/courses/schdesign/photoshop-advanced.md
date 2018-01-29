@@ -1,6 +1,7 @@
 ---
 title: Photoshop haladóknak
 society: Schönherz Design Stúdió
+applicationFormURL: http://schdesign.hu
 tags:
   - design
   - grafika

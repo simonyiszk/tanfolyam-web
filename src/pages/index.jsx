@@ -272,14 +272,13 @@ class CoursesPage extends React.Component {
                     href={node.frontmatter.applicationFormURL}
                     target="_blank"
                     rel="noopener noreferrer"
+                    role="button"
                     className={css`
                       display: inline-block;
                       border: .2rem black solid;
-                      width: 9em;
-                      margin-right: 1rem;
+                      padding: .8em;
                       text-align: center;
-                      color:black;
-                      line-height: 2;
+                      color: inherit;
                       font-weight: bold;
                       text-decoration: none;
 

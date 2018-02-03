@@ -54,7 +54,7 @@ class CoursesPage extends React.Component {
       <Container>
         <Helmet title="Tanfolyamok" />
 
-        <div className={styles.introductionAndSearchFormContainer}>
+        <div className={styles.gappyContainer}>
           <div>
             <h2>
               <span role="img" aria-label="egy halom könyv">
@@ -123,7 +123,7 @@ class CoursesPage extends React.Component {
           </div>
         </div>
 
-        <div>
+        <div className={styles.gappyContainer}>
           {data.courses.edges
             .filter(({ node }) =>
               // Show every course which has at least one of the desired tags

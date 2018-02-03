@@ -1,10 +1,11 @@
 @import '../utils/breakpoints';
 @import '../utils/flexbox';
 
-.introductionAndSearchFormContainer {
+.gappyContainer {
   @include media-breakpoint-up(lg) {
     display: flex;
-    @include gap(2rem);
+    flex-wrap: wrap;
+    @include gap(1rem 3rem);
 
     > * {
       flex: 50%;

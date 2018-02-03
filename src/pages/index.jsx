@@ -72,7 +72,7 @@ class CoursesPage extends React.Component {
               <span role="img" aria-label="egy halom könyv">
                 📚
               </span>{' '}
-              Tanfolyamjainkról
+              Tanfolyamainkról
             </h2>
 
             <p>

@@ -1,0 +1,19 @@
+.root {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+.main {
+  flex: 1;
+  margin-bottom: 1em;
+}
+
+.footer {
+  background: #263238;
+  color: white;
+
+  img {
+    filter: brightness(0) invert(1);
+  }
+}

@@ -14,8 +14,8 @@ occasions:
     instructors:
       - TODO 2
       - TODO 3
-moreInfoURL: https://sem.sch.bme.hu/tanfolyam/
-applicationFormURL: TODO
+moreInfoURL: https://sem.sch.bme.hu/tanfolyam/#alap_tanf_2018
+applicationFormURL: null
 tags:
   - elektronika
   - avr

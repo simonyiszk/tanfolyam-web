@@ -1,24 +1,39 @@
-- id: AC Studio & Live
+- id: AC
+  title: AC Studio & Live
   logo: ./logos/ac.svg
   website: https://acstudio.sch.bme.hu
-- id: Budavári Schönherz Stúdió
+
+- id: BSS
+  title: Budavári Schönherz Stúdió
   logo: ./logos/bss.svg
   website: http://bss.sch.bme.hu
+
 - id: HA5KFU
+  title: HA5KFU rádióamatőr klub
   logo: ./logos/ha5kfu.svg
   website: http://ha5kfu.sch.bme.hu
-- id: KIR fejlesztők és üzemeltetők
+
+- id: Kir-Dev
+  title: KIR fejlesztők és üzemeltetők
   logo: ./logos/kir-dev.svg
   website: http://kir-dev.sch.bme.hu
-- id: Lego kör
+
+- id: LEGO
+  title: LEGO kör
   logo: ./logos/lego.svg
   website: https://lego.sch.bme.hu
-- id: Schönherz Design Stúdió
+
+- id: schdesign
+  title: Schönherz Design Stúdió
   logo: ./logos/sds.svg # TODO: Update source file
   website: http://schdesign.hu
-- id: Schönherz Elektronikai Műhely
+
+- id: SEM
+  title: Schönherz Elektronikai Műhely
   logo: ./logos/sem.svg
   website: https://sem.sch.bme.hu
+
 - id: SPOT
+  title: SPOT fotókör
   logo: ./logos/spot.svg
   website: https://spot.sch.bme.hu

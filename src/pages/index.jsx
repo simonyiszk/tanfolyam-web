@@ -153,145 +153,156 @@ class CoursesPage extends React.Component {
               // Show every course which has at least one of the desired tags
               // TODO: Sort results by relevance
               node.frontmatter.tags.some(tag => searchTermValues.includes(tag)))
-            .map(({ node }) => (
-              <article
-                key={`${node.frontmatter.society.id}__${
-                  node.frontmatter.title
-                }`}
-              >
-                <div
-                  className={css`
-                    display: flex;
-                    justify-content: space-between;
-                    align-items: center;
-                  `}
+            .map(({ node }) => {
+              // TODO: Add support for missing startDate/endDate
+              const dates = node.frontmatter.occasions.map(occasion => `${occasion.startDate} – ${occasion.endDate}`);
+
+              const instructors = Array.from(new Set(node.frontmatter.occasions
+                    .map(occasion => occasion.instructor)
+                    .filter(instructor => instructor != null)));
+
+              return (
+                <article
+                  key={`${node.frontmatter.society.id}__${
+                    node.frontmatter.title
+                  }`}
                 >
-                  <div>
-                    <h3>{node.frontmatter.title}</h3>
+                  <div
+                    className={css`
+                      display: flex;
+                      justify-content: space-between;
+                      align-items: center;
+                    `}
+                  >
+                    <div>
+                      <h3>{node.frontmatter.title}</h3>
 
-                    <ul
+                      <ul
+                        className={css`
+                          position: relative;
+                          list-style: none;
+                          padding-left: 1.75em;
+                          line-height: 1.5;
+
+                          li::before {
+                            position: absolute;
+                            left: 0;
+                          }
+                        `}
+                      >
+                        {dates.length > 0 && (
+                          <li
+                            className={css`
+                              ::before {
+                                content: '🕓';
+                              }
+                            `}
+                          >
+                            <span
+                              aria-label={`${
+                                dates.length === 1 ? 'Időpont' : 'Időpontok'
+                              }: `}
+                            />
+                            {dates.join(', ')}
+                          </li>
+                        )}
+
+                        {instructors.length > 0 && (
+                          <li
+                            className={css`
+                              ::before {
+                                content: '🎓';
+                              }
+                            `}
+                          >
+                            <span
+                              aria-label={`${
+                                instructors.length === 1 ? 'Oktató' : 'Oktatók'
+                              }: `}
+                            />
+                            {instructors.join(', ')}
+                          </li>
+                        )}
+
+                        {node.frontmatter.society.website != null && (
+                          <li
+                            className={css`
+                              ::before {
+                                content: '🌐';
+                              }
+                            `}
+                          >
+                            <span aria-label="A kör weboldala: " />
+                            <a
+                              href={node.frontmatter.society.website}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                            >
+                              {/* Show the URL without protocol */}
+                              {node.frontmatter.society.website.replace(
+                                /(^\w+:|^)\/\//,
+                                '',
+                              )}
+                            </a>
+                          </li>
+                        )}
+                      </ul>
+                    </div>
+
+                    <img
+                      src={node.frontmatter.society.logo.publicURL}
+                      alt={`${node.frontmatter.society.id} logó`}
                       className={css`
-                        position: relative;
-                        list-style: none;
-                        padding-left: 1.75em;
-                        line-height: 1.5;
+                        width: 4em;
+                        margin-left: 2rem;
+                      `}
+                    />
+                  </div>
 
-                        li::before {
-                          position: absolute;
-                          left: 0;
+                  <div
+                    className={css`
+                      > :first-child {
+                        margin-top: 0;
+                      }
+
+                      > :last-child {
+                        margin-bottom: 0;
+                      }
+                    `}
+                    // eslint-disable-next-line react/no-danger
+                    dangerouslySetInnerHTML={{ __html: node.html }}
+                  />
+                  <div
+                    className={css`
+                      display: flex;
+                      justify-content: flex-end;
+                    `}
+                  >
+                    <a
+                      href={node.frontmatter.applicationFormURL}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      role="button"
+                      className={css`
+                        display: inline-block;
+                        border: 0.2rem black solid;
+                        padding: 0.8em;
+                        text-align: center;
+                        color: inherit;
+                        font-weight: bold;
+                        text-decoration: none;
+
+                        & :hover {
+                          text-decoration: none;
                         }
                       `}
                     >
-                      {node.frontmatter.date != null && (
-                        <li
-                          className={css`
-                            ::before {
-                              content: '🕓';
-                            }
-                          `}
-                        >
-                          <span aria-label="Időpont: " />
-                          {node.frontmatter.date}
-                        </li>
-                      )}
-
-                      {node.frontmatter.instructors != null && (
-                        <li
-                          className={css`
-                            ::before {
-                              content: '🎓';
-                            }
-                          `}
-                        >
-                          <span
-                            aria-label={`${
-                              node.frontmatter.instructors.length <= 1
-                                ? 'Oktató'
-                                : 'Oktatók'
-                            }: `}
-                          />
-                          {node.frontmatter.instructors.join(', ')}
-                        </li>
-                      )}
-
-                      {node.frontmatter.society.website != null && (
-                        <li
-                          className={css`
-                            ::before {
-                              content: '🌐';
-                            }
-                          `}
-                        >
-                          <span aria-label="A kör weboldala: " />
-                          <a
-                            href={node.frontmatter.society.website}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                          >
-                            {/* Show the URL without protocol */}
-                            {node.frontmatter.society.website.replace(
-                              /(^\w+:|^)\/\//,
-                              '',
-                            )}
-                          </a>
-                        </li>
-                      )}
-                    </ul>
+                      Jelentkezés
+                    </a>
                   </div>
-
-                  <img
-                    src={node.frontmatter.society.logo.publicURL}
-                    alt={`${node.frontmatter.society.id} logó`}
-                    className={css`
-                      width: 4em;
-                      margin-left: 2rem;
-                    `}
-                  />
-                </div>
-
-                <div
-                  className={css`
-                    > :first-child {
-                      margin-top: 0;
-                    }
-
-                    > :last-child {
-                      margin-bottom: 0;
-                    }
-                  `}
-                  // eslint-disable-next-line react/no-danger
-                  dangerouslySetInnerHTML={{ __html: node.html }}
-                />
-                <div
-                  className={css`
-                    display: flex;
-                    justify-content: flex-end;
-                  `}
-                >
-                  <a
-                    href={node.frontmatter.applicationFormURL}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    role="button"
-                    className={css`
-                      display: inline-block;
-                      border: .2rem black solid;
-                      padding: .8em;
-                      text-align: center;
-                      color: inherit;
-                      font-weight: bold;
-                      text-decoration: none;
-
-                      & :hover {
-                        text-decoration: none;
-                      }
-                    `}
-                  >
-                    Jelentkezés
-                  </a>
-                </div>
-              </article>
-            ))}
+                </article>
+              );
+            })}
         </div>
       </Container>
     );
@@ -320,8 +331,13 @@ export const query = graphql`
               }
               website
             }
-            date(formatString: "LL", locale: "hu")
-            instructors
+            occasions {
+              startDate(formatString: "MMMM Do LT", locale: "hu")
+              endDate(formatString: "LT", locale: "hu")
+              location
+              instructor
+            }
+            moreInfoURL
             applicationFormURL
             tags
           }

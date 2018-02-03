@@ -2,6 +2,7 @@ import flatten from 'lodash.flatten';
 import PropTypes from 'prop-types';
 import React from 'react';
 import styles from './Course.module.scss';
+import LinkButton from './LinkButton';
 
 const Course = ({
   title,
@@ -91,36 +92,28 @@ const Course = ({
         // eslint-disable-next-line react/no-danger
         dangerouslySetInnerHTML={{ __html: descriptionHTML }}
       />
-      {/*
-      <div
-        className={css`
-          display: flex;
-          justify-content: flex-end;
-        `}
-      >
-        <a
-          href={node.frontmatter.applicationFormURL}
-          target="_blank"
-          rel="noopener noreferrer"
-          role="button"
-          className={css`
-            display: inline-block;
-            border: 0.2rem black solid;
-            padding: 0.8em;
-            text-align: center;
-            color: inherit;
-            font-weight: bold;
-            text-decoration: none;
 
-            & :hover {
-              text-decoration: none;
-            }
-          `}
-        >
-          Jelentkezés
-        </a>
+      <div className={styles.buttonsContainer}>
+        {moreInfoURL && (
+          <LinkButton
+            href={moreInfoURL}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            További információ
+          </LinkButton>
+        )}
+
+        {applicationFormURL && (
+          <LinkButton
+            href={applicationFormURL}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Jelentkezés
+          </LinkButton>
+        )}
       </div>
-          */}
     </article>
   );
 };

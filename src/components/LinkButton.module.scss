@@ -1,0 +1,14 @@
+.root {
+  display: inline-block;
+  border: 0.25em black solid;
+  padding: 0.5em 1em;
+  margin: 0.5em;
+  color: black;
+  font-weight: bold;
+
+  &:hover {
+    color: white;
+    background: black;
+    text-decoration: none;
+  }
+}

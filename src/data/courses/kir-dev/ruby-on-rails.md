@@ -3,7 +3,7 @@ title: Ruby on Rails
 society: Kir-Dev
 occasions:
   - startDate: "2018-02-20T18:00+01"
-    endDate: "2018-02-201T21:00+01"
+    endDate: "2018-02-20T21:00+01"
     location: Egyetemi terem
     instructors:
       - Dömök Gergely
@@ -24,4 +24,4 @@ tags:
   - backend
 ---
 
-A 2 alkalmas Ruby on Rilas tanfolyamon megismerkedhettek a nyelv és a keretrendszer adta lehetőségekkel. 
+A 2 alkalmas Ruby on Rilas tanfolyamon megismerkedhettek a nyelv és a keretrendszer adta lehetőségekkel.

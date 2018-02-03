@@ -1,14 +1,13 @@
-import flatten from 'lodash.flatten';
 import PropTypes from 'prop-types';
 import React from 'react';
-import { css } from 'react-emotion';
 import Helmet from 'react-helmet';
 import Select from 'react-select';
 import 'react-select/dist/react-select.css';
 import Container from '../components/Container';
 import MultipleChoiceInputGroup from '../components/MultipleChoiceInputGroup';
+import Course from '../components/Course';
 import RadioButton from '../components/RadioButton';
-import { mediaQueries } from '../utils/media-queries';
+import styles from './index.module.scss';
 
 class CoursesPage extends React.Component {
   constructor(props) {
@@ -55,19 +54,7 @@ class CoursesPage extends React.Component {
       <Container>
         <Helmet title="Tanfolyamok" />
 
-        <div
-          className={css`
-            ${mediaQueries.large(css`
-              display: flex;
-              margin: -2rem;
-
-              > * {
-                flex: 50%;
-                padding: 2rem;
-              }
-            `)};
-          `}
-        >
+        <div className={styles.introductionAndSearchFormContainer}>
           <div>
             <h2>
               <span role="img" aria-label="egy halom könyv">
@@ -94,19 +81,7 @@ class CoursesPage extends React.Component {
               Keresés a tanfolyamok között
             </h2>
 
-            <form
-              className={css`
-                label {
-                  display: inline-block;
-                  margin-right: 1em;
-
-                  input[type='checkbox'],
-                  input[type='radio'] {
-                    margin-right: 0.42em;
-                  }
-                }
-              `}
-            >
+            <form className={styles.searchForm}>
               <fieldset>
                 <legend>Milyen szakra jársz?</legend>
 
@@ -154,174 +129,20 @@ class CoursesPage extends React.Component {
               // Show every course which has at least one of the desired tags
               // TODO: Sort results by relevance
               node.frontmatter.tags.some(tag => searchTermValues.includes(tag)))
-            .map(({ node }) => {
-              // An `endDate` shall only be specified along with a `startDate`
-              const occasionTexts = node.frontmatter.occasions
-                .filter(occasion => occasion.startDate != null)
-                .map((occasion) => {
-                  let result = occasion.startDate;
-
-                  if (occasion.endDate != null) {
-                    result += ` – ${occasion.endDate}`;
-                  }
-
-                  if (occasion.location != null) {
-                    result += ` (${occasion.location})`;
-                  }
-
-                  return result;
-                });
-
-              const instructorTexts = Array.from(new Set(flatten(node.frontmatter.occasions
-                      .filter(occasion => occasion.instructors != null)
-                      .map(occasion => occasion.instructors))));
-
-              return (
-                <article
-                  key={`${node.frontmatter.society.id}__${
-                    node.frontmatter.title
-                  }`}
-                >
-                  <div
-                    className={css`
-                      display: flex;
-                      justify-content: space-between;
-                      align-items: center;
-                    `}
-                  >
-                    <div>
-                      <h3>{node.frontmatter.title}</h3>
-
-                      <ul
-                        className={css`
-                          position: relative;
-                          list-style: none;
-                          padding-left: 1.75em;
-                          line-height: 1.5;
-
-                          li::before {
-                            position: absolute;
-                            left: 0;
-                          }
-                        `}
-                      >
-                        {occasionTexts.length > 0 && (
-                          <li
-                            className={css`
-                              ::before {
-                                content: '🕓';
-                              }
-                            `}
-                          >
-                            <span
-                              aria-label={`${
-                                occasionTexts.length === 1
-                                  ? 'Alkalom'
-                                  : 'Alkalmak'
-                              }: `}
-                            />
-                            {occasionTexts.join(', ')}
-                          </li>
-                        )}
-
-                        {instructorTexts.length > 0 && (
-                          <li
-                            className={css`
-                              ::before {
-                                content: '🎓';
-                              }
-                            `}
-                          >
-                            <span
-                              aria-label={`${
-                                instructorTexts.length === 1
-                                  ? 'Oktató'
-                                  : 'Oktatók'
-                              }: `}
-                            />
-                            {instructorTexts.join(', ')}
-                          </li>
-                        )}
-
-                        {node.frontmatter.society.website != null && (
-                          <li
-                            className={css`
-                              ::before {
-                                content: '🌐';
-                              }
-                            `}
-                          >
-                            <span aria-label="A kör weboldala: " />
-                            <a
-                              href={node.frontmatter.society.website}
-                              target="_blank"
-                              rel="noopener noreferrer"
-                            >
-                              {/* Show the URL without protocol */}
-                              {node.frontmatter.society.website.replace(
-                                /(^\w+:|^)\/\//,
-                                '',
-                              )}
-                            </a>
-                          </li>
-                        )}
-                      </ul>
-                    </div>
-
-                    <img
-                      src={node.frontmatter.society.logo.publicURL}
-                      alt={`${node.frontmatter.society.id} logó`}
-                      className={css`
-                        width: 4em;
-                        margin-left: 2rem;
-                      `}
-                    />
-                  </div>
-
-                  <div
-                    className={css`
-                      > :first-child {
-                        margin-top: 0;
-                      }
-
-                      > :last-child {
-                        margin-bottom: 0;
-                      }
-                    `}
-                    // eslint-disable-next-line react/no-danger
-                    dangerouslySetInnerHTML={{ __html: node.html }}
-                  />
-                  <div
-                    className={css`
-                      display: flex;
-                      justify-content: flex-end;
-                    `}
-                  >
-                    <a
-                      href={node.frontmatter.applicationFormURL}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      role="button"
-                      className={css`
-                        display: inline-block;
-                        border: 0.2rem black solid;
-                        padding: 0.8em;
-                        text-align: center;
-                        color: inherit;
-                        font-weight: bold;
-                        text-decoration: none;
-
-                        & :hover {
-                          text-decoration: none;
-                        }
-                      `}
-                    >
-                      Jelentkezés
-                    </a>
-                  </div>
-                </article>
-              );
-            })}
+            .map(({ node }) => (
+              <Course
+                key={`${node.frontmatter.society.id}__${
+                  node.frontmatter.title
+                }`}
+                title={node.frontmatter.title}
+                society={node.frontmatter.society}
+                occasions={node.frontmatter.occasions}
+                moreInfoURL={node.frontmatter.moreInfoURL}
+                applicationFormURL={node.frontmatter.applicationFormURL}
+                tags={node.frontmatter.tags}
+                descriptionHTML={node.html}
+              />
+            ))}
         </div>
       </Container>
     );

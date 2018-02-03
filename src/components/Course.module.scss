@@ -1,0 +1,52 @@
+@import '../utils/flexbox';
+
+.metadataContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  @include gap(1rem);
+}
+
+.metadataList {
+  position: relative;
+  list-style: none;
+  padding-left: 1.75em;
+  line-height: 1.5;
+
+  li::before {
+    position: absolute;
+    left: 0;
+  }
+}
+
+@mixin list-item-emoji($emoji) {
+  &::before {
+    content: $emoji;
+  }
+}
+
+.occasions {
+  @include list-item-emoji('🕓');
+}
+
+.instructors {
+  @include list-item-emoji('🎓');
+}
+
+.societyWebsite {
+  @include list-item-emoji('🌐');
+}
+
+.societyLogo {
+  width: 6em;
+}
+
+.description {
+  > :first-child {
+    margin-top: 0;
+  }
+
+  > :last-child {
+    margin-bottom: 0;
+  }
+}

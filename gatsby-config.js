@@ -20,7 +20,6 @@ module.exports = {
     'gatsby-transformer-remark',
     'gatsby-transformer-sharp',
     'gatsby-transformer-yaml',
-    'gatsby-plugin-emotion',
     'gatsby-plugin-sass',
     'gatsby-plugin-sharp',
     'gatsby-plugin-react-helmet',

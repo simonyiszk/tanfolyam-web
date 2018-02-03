@@ -1,0 +1,25 @@
+@import '../utils/breakpoints';
+@import '../utils/flexbox';
+
+.introductionAndSearchFormContainer {
+  @include media-breakpoint-up(lg) {
+    display: flex;
+    @include gap(2rem);
+
+    > * {
+      flex: 50%;
+    }
+  }
+}
+
+.searchForm {
+  label {
+    display: inline-block;
+    margin-right: 1em;
+
+    input[type='checkbox'],
+    input[type='radio'] {
+      margin-right: 0.42em;
+    }
+  }
+}

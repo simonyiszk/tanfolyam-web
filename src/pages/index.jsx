@@ -240,7 +240,7 @@ class CoursesPage extends React.Component {
                   </div>
 
                   <img
-                    src={`/${node.frontmatter.society.logo.relativePath}`}
+                    src={node.frontmatter.society.logo.publicURL}
                     alt={`${node.frontmatter.society.id} logó`}
                     className={css`
                       width: 4em;
@@ -316,7 +316,7 @@ export const query = graphql`
             society {
               id
               logo {
-                relativePath
+                publicURL
               }
               website
             }

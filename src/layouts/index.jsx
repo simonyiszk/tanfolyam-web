@@ -11,7 +11,7 @@ import FaYouTubePlay from 'react-icons/lib/fa/youtube-play';
 // eslint-disable-next-line import/no-webpack-loader-syntax, import/no-unresolved
 import normalizeCSS from '!raw-loader!normalize.css';
 
-import SimonyiLightLogoSrc from '../../static/assets/logos/simonyi-light.svg';
+import SimonyiLightLogoSrc from '../data/logos/simonyi-light.svg';
 import Container from '../components/Container';
 
 // eslint-disable-next-line no-unused-expressions
@@ -192,7 +192,7 @@ export const query = graphql`
     }
 
     simonyiClubRoom: file(
-      relativePath: { eq: "assets/pictures/simonyi-club-room.jpeg" }
+      relativePath: { eq: "pictures/simonyi-club-room.jpeg" }
     ) {
       childImageSharp {
         sizes(maxWidth: 1920, maxHeight: 480, cropFocus: CENTER) {

@@ -17,14 +17,7 @@ module.exports = {
       resolve: 'gatsby-source-filesystem',
       options: {
         name: 'data',
-        path: `${__dirname}/data/`,
-      },
-    },
-    {
-      resolve: 'gatsby-source-filesystem',
-      options: {
-        name: 'static',
-        path: `${__dirname}/static/`,
+        path: `${__dirname}/src/data/`,
       },
     },
     'gatsby-transformer-remark',

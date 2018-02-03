@@ -1,3 +1,4 @@
+import flatten from 'lodash.flatten';
 import PropTypes from 'prop-types';
 import React from 'react';
 import { css } from 'react-emotion';
@@ -157,9 +158,9 @@ class CoursesPage extends React.Component {
               // TODO: Add support for missing startDate/endDate
               const dates = node.frontmatter.occasions.map(occasion => `${occasion.startDate} – ${occasion.endDate}`);
 
-              const instructors = Array.from(new Set(node.frontmatter.occasions
-                    .map(occasion => occasion.instructor)
-                    .filter(instructor => instructor != null)));
+              const allInstructors = Array.from(new Set(flatten(node.frontmatter.occasions
+                      .map(occasion => occasion.instructors)
+                      .filter(instructors => instructors != null))));
 
               return (
                 <article
@@ -207,7 +208,7 @@ class CoursesPage extends React.Component {
                           </li>
                         )}
 
-                        {instructors.length > 0 && (
+                        {allInstructors.length > 0 && (
                           <li
                             className={css`
                               ::before {
@@ -217,10 +218,12 @@ class CoursesPage extends React.Component {
                           >
                             <span
                               aria-label={`${
-                                instructors.length === 1 ? 'Oktató' : 'Oktatók'
+                                allInstructors.length === 1
+                                  ? 'Oktató'
+                                  : 'Oktatók'
                               }: `}
                             />
-                            {instructors.join(', ')}
+                            {allInstructors.join(', ')}
                           </li>
                         )}
 
@@ -335,7 +338,7 @@ export const query = graphql`
               startDate(formatString: "MMMM Do LT", locale: "hu")
               endDate(formatString: "LT", locale: "hu")
               location
-              instructor
+              instructors
             }
             moreInfoURL
             applicationFormURL

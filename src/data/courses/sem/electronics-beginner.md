@@ -5,11 +5,15 @@ occasions:
   - startDate: "2018-02-14T20:00+01"
     endDate: "2018-02-14T22:00+01"
     location: SCH 102
-    instructor: TODO
+    instructors:
+      - TODO 1
+      - TODO 2
   - startDate: "2018-02-19T19:30+01"
     endDate: "2018-02-19T21:30+01"
     location: SCH 102
-    instructor: TODO
+    instructors:
+      - TODO 2
+      - TODO 3
 moreInfoURL: https://sem.sch.bme.hu/tanfolyam/
 applicationFormURL: TODO
 tags:

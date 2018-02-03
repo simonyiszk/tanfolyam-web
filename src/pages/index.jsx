@@ -155,12 +155,26 @@ class CoursesPage extends React.Component {
               // TODO: Sort results by relevance
               node.frontmatter.tags.some(tag => searchTermValues.includes(tag)))
             .map(({ node }) => {
-              // TODO: Add support for missing startDate/endDate
-              const dates = node.frontmatter.occasions.map(occasion => `${occasion.startDate} – ${occasion.endDate}`);
+              // An `endDate` shall only be specified along with a `startDate`
+              const occasionTexts = node.frontmatter.occasions
+                .filter(occasion => occasion.startDate != null)
+                .map((occasion) => {
+                  let result = occasion.startDate;
 
-              const allInstructors = Array.from(new Set(flatten(node.frontmatter.occasions
-                      .map(occasion => occasion.instructors)
-                      .filter(instructors => instructors != null))));
+                  if (occasion.endDate != null) {
+                    result += ` – ${occasion.endDate}`;
+                  }
+
+                  if (occasion.location != null) {
+                    result += ` (${occasion.location})`;
+                  }
+
+                  return result;
+                });
+
+              const instructorTexts = Array.from(new Set(flatten(node.frontmatter.occasions
+                      .filter(occasion => occasion.instructors != null)
+                      .map(occasion => occasion.instructors))));
 
               return (
                 <article
@@ -191,7 +205,7 @@ class CoursesPage extends React.Component {
                           }
                         `}
                       >
-                        {dates.length > 0 && (
+                        {occasionTexts.length > 0 && (
                           <li
                             className={css`
                               ::before {
@@ -201,14 +215,16 @@ class CoursesPage extends React.Component {
                           >
                             <span
                               aria-label={`${
-                                dates.length === 1 ? 'Időpont' : 'Időpontok'
+                                occasionTexts.length === 1
+                                  ? 'Alkalom'
+                                  : 'Alkalmak'
                               }: `}
                             />
-                            {dates.join(', ')}
+                            {occasionTexts.join(', ')}
                           </li>
                         )}
 
-                        {allInstructors.length > 0 && (
+                        {instructorTexts.length > 0 && (
                           <li
                             className={css`
                               ::before {
@@ -218,12 +234,12 @@ class CoursesPage extends React.Component {
                           >
                             <span
                               aria-label={`${
-                                allInstructors.length === 1
+                                instructorTexts.length === 1
                                   ? 'Oktató'
                                   : 'Oktatók'
                               }: `}
                             />
-                            {allInstructors.join(', ')}
+                            {instructorTexts.join(', ')}
                           </li>
                         )}
 

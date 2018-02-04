@@ -123,26 +123,36 @@ class CoursesPage extends React.Component {
           </div>
         </div>
 
-        <div className={styles.gappyContainer}>
-          {data.courses.edges
-            .filter(({ node }) =>
-              // Show every course which has at least one of the desired tags
-              // TODO: Sort results by relevance
-              node.frontmatter.tags.some(tag => searchTermValues.includes(tag)))
-            .map(({ node }) => (
-              <Course
-                key={`${node.frontmatter.society.id}__${
-                  node.frontmatter.title
-                }`}
-                title={node.frontmatter.title}
-                society={node.frontmatter.society}
-                occasions={node.frontmatter.occasions}
-                moreInfoURL={node.frontmatter.moreInfoURL}
-                applicationFormURL={node.frontmatter.applicationFormURL}
-                tags={node.frontmatter.tags}
-                descriptionHTML={node.html}
-              />
-            ))}
+        <div>
+          <h2>
+            <span role="img" aria-label="ötlet">
+              💡
+            </span>{' '}
+            Ajánlott tanfolyamok
+          </h2>
+
+          <div className={styles.gappyContainer}>
+            {data.courses.edges
+              .filter(({ node }) =>
+                // Show every course which has at least one of the desired tags
+                // TODO: Sort results by relevance
+                node.frontmatter.tags.some(tag =>
+                  searchTermValues.includes(tag)))
+              .map(({ node }) => (
+                <Course
+                  key={`${node.frontmatter.society.id}__${
+                    node.frontmatter.title
+                  }`}
+                  title={node.frontmatter.title}
+                  society={node.frontmatter.society}
+                  occasions={node.frontmatter.occasions}
+                  moreInfoURL={node.frontmatter.moreInfoURL}
+                  applicationFormURL={node.frontmatter.applicationFormURL}
+                  tags={node.frontmatter.tags}
+                  descriptionHTML={node.html}
+                />
+              ))}
+          </div>
         </div>
       </Container>
     );

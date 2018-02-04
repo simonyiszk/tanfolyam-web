@@ -7,6 +7,10 @@
   @include gap(1rem);
 }
 
+.title {
+  margin-top: 0;
+}
+
 .metadataList {
   position: relative;
   list-style: none;

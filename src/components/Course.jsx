@@ -39,7 +39,7 @@ const Course = ({
     <article {...props}>
       <div className={styles.metadataContainer}>
         <div>
-          <h3>{title}</h3>
+          <h3 className={styles.title}>{title}</h3>
 
           <ul className={styles.metadataList}>
             {occasionTexts.length > 0 && (

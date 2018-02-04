@@ -2,14 +2,14 @@
 title: Ruby on Rails
 society: Kir-Dev
 occasions:
-  - startDate: "2018-02-20T18:00+01"
-    endDate: "2018-02-20T21:00+01"
+  - startDate: "2018-02-20T18:00Z"
+    endDate: "2018-02-20T21:00Z"
     location: Egyetemi terem
     instructors:
       - Dömök Gergely
       - Gulyás Gergely
-  - startDate: "2018-02-27T18:00+01"
-    endDate: "2018-02-27T21:00+01"
+  - startDate: "2018-02-27T18:00Z"
+    endDate: "2018-02-27T21:00Z"
     location: Egyetemi terem
     instructors:
       - Dömök Gergely

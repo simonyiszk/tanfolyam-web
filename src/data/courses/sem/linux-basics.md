@@ -2,7 +2,7 @@
 title: Linux alapok villamosmérnöki szemmel – Bemutató
 society: SEM
 occasions:
-  - startDate: "2018-02-05T20:00+01"
+  - startDate: "2018-02-05T20:00Z"
     endDate: null
     location: SCH 102
     instructors: null

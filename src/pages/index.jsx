@@ -13,9 +13,12 @@ class CoursesPage extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
+      programme: null,
+      startYear: null,
       searchTerms: [],
     };
 
+    this.handleInputChange = this.handleInputChange.bind(this);
     this.handleSearchTermsChange = this.handleSearchTermsChange.bind(this);
 
     const { data } = props;
@@ -37,6 +40,15 @@ class CoursesPage extends React.Component {
         tag);
   }
 
+  handleInputChange(event) {
+    const { target } = event;
+    const { name, value } = target;
+
+    this.setState({
+      [name]: value,
+    });
+  }
+
   handleSearchTermsChange(value) {
     this.setState({
       searchTerms: value,
@@ -46,7 +58,7 @@ class CoursesPage extends React.Component {
   render() {
     const { data } = this.props;
     const { allTags } = this;
-    const { searchTerms } = this.state;
+    const { programme, startYear, searchTerms } = this.state;
 
     const searchTermValues = searchTerms.map(({ value }) => value);
 
@@ -85,27 +97,43 @@ class CoursesPage extends React.Component {
               <fieldset>
                 <legend>Milyen szakra jársz?</legend>
 
-                <MultipleChoiceInputGroup name="programme">
+                <MultipleChoiceInputGroup
+                  name="programme"
+                  onChange={this.handleInputChange}
+                >
                   <RadioButton
                     value="computerEngineering"
+                    checked={programme === 'computerEngineering'}
                     label="Mérnökinformatikus"
                   />
                   <RadioButton
                     value="electricalEngineering"
+                    checked={programme === 'electricalEngineering'}
                     label="Villamosmérnök"
                   />
-                  <RadioButton value="other" label="Egyéb" />
+                  <RadioButton
+                    value="other"
+                    checked={programme === 'other'}
+                    label="Egyéb"
+                  />
                 </MultipleChoiceInputGroup>
               </fieldset>
 
               <fieldset>
                 <legend>Melyik évben kezdtél?</legend>
 
-                <MultipleChoiceInputGroup name="startYear">
-                  <RadioButton value="2017" />
-                  <RadioButton value="2016" />
-                  <RadioButton value="2015" />
-                  <RadioButton value="other" label="Egyéb" />
+                <MultipleChoiceInputGroup
+                  name="startYear"
+                  onChange={this.handleInputChange}
+                >
+                  <RadioButton value="2017" checked={startYear === '2017'} />
+                  <RadioButton value="2016" checked={startYear === '2016'} />
+                  <RadioButton value="2015" checked={startYear === '2015'} />
+                  <RadioButton
+                    value="other"
+                    checked={startYear === 'other'}
+                    label="Egyéb"
+                  />
                 </MultipleChoiceInputGroup>
               </fieldset>
 
@@ -131,28 +159,36 @@ class CoursesPage extends React.Component {
             Ajánlott tanfolyamok
           </h2>
 
-          <div className={styles.gappyContainer}>
-            {data.courses.edges
-              .filter(({ node }) =>
-                // Show every course which has at least one of the desired tags
-                // TODO: Sort results by relevance
-                node.frontmatter.tags.some(tag =>
-                  searchTermValues.includes(tag)))
-              .map(({ node }) => (
-                <Course
-                  key={`${node.frontmatter.society.id}__${
-                    node.frontmatter.title
-                  }`}
-                  title={node.frontmatter.title}
-                  society={node.frontmatter.society}
-                  occasions={node.frontmatter.occasions}
-                  moreInfoURL={node.frontmatter.moreInfoURL}
-                  applicationFormURL={node.frontmatter.applicationFormURL}
-                  tags={node.frontmatter.tags}
-                  descriptionHTML={node.html}
-                />
-              ))}
-          </div>
+          {programme == null ||
+          startYear == null ||
+          searchTerms.length === 0 ? (
+            <p className={styles.missingSearchFormDataText}>
+              Kérlek, töltsd ki a keresési űrlap összes mezőjét!
+            </p>
+          ) : (
+            <div className={styles.gappyContainer}>
+              {data.courses.edges
+                .filter(({ node }) =>
+                  // Show every course which has at least one of the desired tags
+                  // TODO: Sort results by relevance
+                  node.frontmatter.tags.some(tag =>
+                    searchTermValues.includes(tag)))
+                .map(({ node }) => (
+                  <Course
+                    key={`${node.frontmatter.society.id}__${
+                      node.frontmatter.title
+                    }`}
+                    title={node.frontmatter.title}
+                    society={node.frontmatter.society}
+                    occasions={node.frontmatter.occasions}
+                    moreInfoURL={node.frontmatter.moreInfoURL}
+                    applicationFormURL={node.frontmatter.applicationFormURL}
+                    tags={node.frontmatter.tags}
+                    descriptionHTML={node.html}
+                  />
+                ))}
+            </div>
+          )}
         </div>
       </Container>
     );

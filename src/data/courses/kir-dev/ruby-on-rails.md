@@ -12,7 +12,7 @@ occasions:
     endDate: "2018-02-27T21:00+01"
     location: Egyetemi terem
     instructors:
-      - Dömög Gergely
+      - Dömök Gergely
       - Gulyás Gergely
 moreInfoURL: http://kir-dev.github.io/tanfolyam/
 applicationFormURL: http://kir-dev.github.io/tanfolyam/
@@ -24,4 +24,4 @@ tags:
   - backend
 ---
 
-A 2 alkalmas Ruby on Rilas tanfolyamon megismerkedhettek a nyelv és a keretrendszer adta lehetőségekkel.
+A 2 alkalmas Ruby on Rails tanfolyamon megismerkedhettek a nyelv és a keretrendszer adta lehetőségekkel.

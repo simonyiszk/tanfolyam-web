@@ -16,8 +16,12 @@ const Course = ({
 }) => {
   // An `endDate` shall only be specified along with a `startDate`
   const occasionTexts = occasions
-    .filter(occasion => occasion.startDate != null)
+    .filter(occasion => occasion.dateText != null || occasion.startDate != null)
     .map((occasion) => {
+      if (occasion.dateText != null) {
+        return occasion.dateText;
+      }
+
       let result = occasion.startDate;
 
       if (occasion.endDate != null) {

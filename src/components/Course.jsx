@@ -84,11 +84,13 @@ const Course = ({
           </ul>
         </div>
 
-        <img
-          src={society.logo.publicURL}
-          alt={`${society.id} logó`}
-          className={styles.societyLogo}
-        />
+        <div className={styles.societyLogoContainer}>
+          <img
+            src={society.logo.publicURL}
+            alt={`${society.id} logó`}
+            className={styles.societyLogo}
+          />
+        </div>
       </div>
 
       <div

@@ -7,6 +7,7 @@ import Container from '../components/Container';
 import MultipleChoiceInputGroup from '../components/MultipleChoiceInputGroup';
 import Course from '../components/Course';
 import RadioButton from '../components/RadioButton';
+import Checkbox from '../components/Checkbox';
 import styles from './index.module.scss';
 
 class CoursesPage extends React.Component {
@@ -15,6 +16,7 @@ class CoursesPage extends React.Component {
     this.state = {
       programme: null,
       startYear: null,
+      showAll: null,
       searchTerms: [],
     };
 
@@ -42,7 +44,8 @@ class CoursesPage extends React.Component {
 
   handleInputChange(event) {
     const { target } = event;
-    const { name, value } = target;
+    const { name } = target;
+    const value = target.type === 'checkbox' ? target.checked : target.value;
 
     this.setState({
       [name]: value,
@@ -146,6 +149,13 @@ class CoursesPage extends React.Component {
                   value={searchTerms}
                   onChange={this.handleSearchTermsChange}
                 />
+                <Checkbox
+                  name="showAll"
+                  onChange={this.handleInputChange}
+                  value="showAllCourse"
+                  checked={this.state.showAll}
+                  label="Mutass mindent"
+                />
               </fieldset>
             </form>
           </div>
@@ -161,7 +171,7 @@ class CoursesPage extends React.Component {
 
           {programme == null ||
           startYear == null ||
-          searchTerms.length === 0 ? (
+          (searchTerms.length === 0 && !this.state.showAll) ? (
             <p className={styles.missingSearchFormDataText}>
               Kérlek, töltsd ki a keresési űrlap összes mezőjét!
             </p>
@@ -169,9 +179,11 @@ class CoursesPage extends React.Component {
             <div className={styles.gappyContainer}>
               {data.courses.edges
                 .filter(({ node }) =>
-                  // Show every course which has at least one of the desired tags
-                  node.frontmatter.tags.some(tag =>
-                    searchTermValues.includes(tag)))
+                    // Show every course which has at least one of the desired tags
+                    (this.state.showAll
+                      ? true
+                      : node.frontmatter.tags.some(tag =>
+                          searchTermValues.includes(tag))))
                 .sort((a, b) => {
                   // Sort results by relevance
                   // TODO: Improve performance

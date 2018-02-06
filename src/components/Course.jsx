@@ -19,7 +19,7 @@ const Course = ({
     .filter(occasion => occasion.dateText != null || occasion.startDate != null)
     .map((occasion) => {
       if (occasion.dateText != null) {
-        return occasion.dateText;
+        return <div>{occasion.dateText}</div>;
       }
 
       let result = occasion.startDate;
@@ -32,7 +32,7 @@ const Course = ({
         result += ` (${occasion.location})`;
       }
 
-      return result;
+      return <div>{result}</div>;
     });
 
   const instructorTexts = Array.from(new Set(flatten(occasions
@@ -53,7 +53,7 @@ const Course = ({
                     occasionTexts.length === 1 ? 'Alkalom' : 'Alkalmak'
                   }: `}
                 />
-                {occasionTexts.join(', ')}
+                {occasionTexts}
               </li>
             )}
 

@@ -167,12 +167,26 @@ class CoursesPage extends React.Component {
             </p>
           ) : (
             <div className={styles.gappyContainer}>
+              {console.log(data.courses.edges)}
               {data.courses.edges
                 .filter(({ node }) =>
                   // Show every course which has at least one of the desired tags
                   // TODO: Sort results by relevance
                   node.frontmatter.tags.some(tag =>
                     searchTermValues.includes(tag)))
+                .sort((a, b) => {
+                  const node1Relevance = a.node.frontmatter.tags.reduce(
+                    (accumulator, tag) =>
+                      accumulator + (searchTermValues.includes(tag) ? 1 : 0),
+                    0,
+                  );
+                  const node2Relevance = b.node.frontmatter.tags.reduce(
+                    (accumulator, tag) =>
+                      accumulator + (searchTermValues.includes(tag) ? 1 : 0),
+                    0,
+                  );
+                  return node2Relevance - node1Relevance;
+                })
                 .map(({ node }) => (
                   <Course
                     key={`${node.frontmatter.society.id}__${

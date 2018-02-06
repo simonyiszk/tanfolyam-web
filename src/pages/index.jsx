@@ -149,13 +149,15 @@ class CoursesPage extends React.Component {
                   value={searchTerms}
                   onChange={this.handleSearchTermsChange}
                 />
-                <Checkbox
-                  name="showAll"
-                  onChange={this.handleInputChange}
-                  value="showAllCourse"
-                  checked={this.state.showAll}
-                  label="Mutass mindent"
-                />
+                <div className={styles.showAllBox}>
+                  <Checkbox
+                    name="showAll"
+                    onChange={this.handleInputChange}
+                    value="showAllCourse"
+                    checked={this.state.showAll}
+                    label="Mutass mindent"
+                  />
+                </div>
               </fieldset>
             </form>
           </div>

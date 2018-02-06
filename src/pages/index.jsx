@@ -232,6 +232,7 @@ export const query = graphql`
               website
             }
             occasions {
+              dateText
               startDate(formatString: "MMMM Do LT", locale: "hu")
               endDate(formatString: "LT", locale: "hu")
               location

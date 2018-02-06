@@ -25,7 +25,7 @@
 
 - id: schdesign
   title: Schönherz Design Stúdió
-  logo: ./logos/sds.svg # TODO: Update source file
+  logo: ./logos/schdesign.svg
   website: http://schdesign.hu
 
 - id: SEM

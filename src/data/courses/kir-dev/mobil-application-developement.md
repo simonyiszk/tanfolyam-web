@@ -27,4 +27,4 @@ tags:
   - android
 ---
 
-2 alkalmas mobil fejlesztői tanfolyam, ahol a résztvevők megismerkedhetnek a cross-platformos mobilfejlesztés alapjaival ionic(3) és angular(4) segítségével. A tanfolyamon megtanuljuk a project létrehozását és felépítését, illetve elkészítünk egy teljes alkalmazást, mely használja a telefon rendszerének az API-jait (pl kamera, szenzorok), illetve egy webes API segítségével kommunikál a backand-del.
+2 alkalmas mobil fejlesztői tanfolyam, ahol a résztvevők megismerkedhetnek a cross-platformos mobilfejlesztés alapjaival ionic(3) és angular(4) segítségével. A tanfolyamon megtanuljuk a project létrehozását és felépítését, illetve elkészítünk egy teljes alkalmazást, mely használja a telefon rendszerének az API-jait (pl kamera, szenzorok), illetve egy webes API segítségével kommunikál a backend-del.

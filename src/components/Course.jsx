@@ -128,10 +128,15 @@ Course.propTypes = {
   title: PropTypes.string.isRequired,
   society: PropTypes.shape({}).isRequired,
   occasions: PropTypes.arrayOf(PropTypes.shape({})).isRequired,
-  moreInfoURL: PropTypes.string.isRequired,
-  applicationFormURL: PropTypes.string.isRequired,
+  moreInfoURL: PropTypes.string,
+  applicationFormURL: PropTypes.string,
   tags: PropTypes.arrayOf(PropTypes.string).isRequired,
   descriptionHTML: PropTypes.string.isRequired,
+};
+
+Course.defaultProps = {
+  moreInfoURL: '',
+  applicationFormURL: '',
 };
 
 export default Course;

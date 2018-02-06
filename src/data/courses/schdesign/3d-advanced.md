@@ -2,7 +2,7 @@
 title: 3D Modellezés Workshop Haladóknak
 society: schdesign
 occasions:
-  - dateText: 7. hét
+  - dateText: 7. oktatási hét
 applicationFormURL: https://goo.gl/forms/vMMt0M19Q4etOPc73
 tags:
   - 3d

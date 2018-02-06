@@ -3,10 +3,7 @@ title: Linux alapok villamosmérnöki szemmel – Bemutató
 society: SEM
 occasions:
   - startDate: "2018-02-05T20:00Z"
-    endDate: null
     location: SCH 102
-    instructors: null
-moreInfoURL: null
 applicationFormURL: https://framadate.org/simonyiszk-linux-alapok
 tags:
   - linux

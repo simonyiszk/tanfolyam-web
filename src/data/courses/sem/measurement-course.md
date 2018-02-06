@@ -2,12 +2,9 @@
 title: Mérő tanfolyam
 society: SEM
 occasions:
-  - startDate: null
-    endDate: null
-    location: null
-    instructors: null
+  - dateText: ~11. oktatási hét
 moreInfoURL: https://sem.sch.bme.hu/tanfolyam/#mero_tanf_2018
-applicationFormURL: null
+applicationFormURL: https://framadate.org/simonyiszk-linux-alapok
 tags:
   - oszcilloszkóp
   - négyszögjel

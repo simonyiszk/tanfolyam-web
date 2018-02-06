@@ -2,7 +2,7 @@
 title: Illustrator Workshop Haladóknak
 society: schdesign
 occasions:
-  - dateText: 5. hét
+  - dateText: 5. oktatási hét
 applicationFormURL: https://goo.gl/forms/vMMt0M19Q4etOPc73
 tags:
   - vektorgrafika

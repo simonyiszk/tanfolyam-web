@@ -2,7 +2,7 @@
 title: Photoshop Workshop Haladóknak
 society: schdesign
 occasions:
-  - dateText: 4. hét
+  - dateText: 4. oktatási hét
 applicationFormURL: https://goo.gl/forms/vMMt0M19Q4etOPc73
 tags:
   - rasztergrafika

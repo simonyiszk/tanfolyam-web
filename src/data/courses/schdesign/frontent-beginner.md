@@ -2,7 +2,7 @@
 title: Frontend és Sitebuild Workshop Kezdőknek
 society: schdesign
 occasions:
-  - dateText: 6. hét
+  - dateText: 6. oktatási hét
 applicationFormURL: https://goo.gl/forms/vMMt0M19Q4etOPc73
 tags:
   - frontend

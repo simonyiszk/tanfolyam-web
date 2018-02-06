@@ -1,3 +1,4 @@
+import uuidv4 from 'uuid/v4';
 import PropTypes from 'prop-types';
 import React from 'react';
 import Helmet from 'react-helmet';
@@ -9,6 +10,8 @@ import Course from '../components/Course';
 import RadioButton from '../components/RadioButton';
 import Checkbox from '../components/Checkbox';
 import styles from './index.module.scss';
+
+const sessionID = uuidv4();
 
 class CoursesPage extends React.Component {
   constructor(props) {
@@ -40,6 +43,34 @@ class CoursesPage extends React.Component {
       .map(([tag]) =>
         // Drop occurrence counts
         tag);
+  }
+
+  componentDidUpdate(prevProps, prevState) {
+    const { programme, startYear, searchTerms } = this.state;
+
+    const searchTermValues = searchTerms.map(({ value }) => value);
+
+    if (
+      programme != null &&
+      startYear != null &&
+      searchTerms.length !== 0 &&
+      (prevState.programme !== programme ||
+        prevState.startYear !== startYear ||
+        prevState.searchTerms !== searchTerms)
+    ) {
+      fetch('http://152.66.211.46:13420', {
+        method: 'POST',
+        body: JSON.stringify({
+          programme,
+          startYear,
+          searchTerms: searchTermValues,
+          sessionID,
+        }),
+        headers: new Headers({
+          'Content-Type': 'application/json',
+        }),
+      }).catch(() => {});
+    }
   }
 
   handleInputChange(event) {

@@ -1,5 +1,5 @@
 ---
-title: Arduino workshop
+title: Mesterséges intelligencia workshop
 society: LEGO
 occasions:
   - startDate: "2018-02-22T17:00Z"

@@ -19,8 +19,8 @@ class CoursesPage extends React.Component {
     this.state = {
       programme: null,
       startYear: null,
-      showAll: null,
       searchTerms: [],
+      showAll: false,
     };
 
     this.handleInputChange = this.handleInputChange.bind(this);
@@ -46,17 +46,20 @@ class CoursesPage extends React.Component {
   }
 
   componentDidUpdate(prevProps, prevState) {
-    const { programme, startYear, searchTerms } = this.state;
+    const {
+      programme, startYear, searchTerms, showAll,
+    } = this.state;
 
     const searchTermValues = searchTerms.map(({ value }) => value);
 
     if (
       programme != null &&
       startYear != null &&
-      searchTerms.length !== 0 &&
+      (searchTerms.length !== 0 || showAll) &&
       (prevState.programme !== programme ||
         prevState.startYear !== startYear ||
-        prevState.searchTerms !== searchTerms)
+        prevState.searchTerms !== searchTerms ||
+        prevState.showAll !== showAll)
     ) {
       fetch('http://152.66.211.46:13420', {
         method: 'POST',
@@ -92,7 +95,9 @@ class CoursesPage extends React.Component {
   render() {
     const { data } = this.props;
     const { allTags } = this;
-    const { programme, startYear, searchTerms } = this.state;
+    const {
+      programme, startYear, searchTerms, showAll,
+    } = this.state;
 
     const searchTermValues = searchTerms.map(({ value }) => value);
 
@@ -185,7 +190,7 @@ class CoursesPage extends React.Component {
                     name="showAll"
                     onChange={this.handleInputChange}
                     value="showAllCourse"
-                    checked={this.state.showAll}
+                    checked={showAll}
                     label="Mutass mindent"
                   />
                 </div>
@@ -204,7 +209,7 @@ class CoursesPage extends React.Component {
 
           {programme == null ||
           startYear == null ||
-          (searchTerms.length === 0 && !this.state.showAll) ? (
+          (searchTerms.length === 0 && !showAll) ? (
             <p className={styles.missingSearchFormDataText}>
               Kérlek, töltsd ki a keresési űrlap összes mezőjét!
             </p>
@@ -213,7 +218,7 @@ class CoursesPage extends React.Component {
               {data.courses.edges
                 .filter(({ node }) =>
                     // Show every course which has at least one of the desired tags
-                    (this.state.showAll
+                    (showAll
                       ? true
                       : node.frontmatter.tags.some(tag =>
                           searchTermValues.includes(tag))))

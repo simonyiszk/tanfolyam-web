@@ -53,9 +53,7 @@ class CoursesPage extends React.Component {
     const searchTermValues = searchTerms.map(({ value }) => value);
 
     if (
-      programme != null &&
-      startYear != null &&
-      (searchTerms.length !== 0 || showAll) &&
+      this.isFormFilledOut() &&
       (prevState.programme !== programme ||
         prevState.startYear !== startYear ||
         prevState.searchTerms !== searchTerms ||
@@ -90,6 +88,18 @@ class CoursesPage extends React.Component {
     this.setState({
       searchTerms: value,
     });
+  }
+
+  isFormFilledOut() {
+    const {
+      programme, startYear, searchTerms, showAll,
+    } = this.state;
+
+    return (
+      programme != null &&
+      startYear != null &&
+      (searchTerms.length !== 0 || showAll)
+    );
   }
 
   render() {
@@ -207,9 +217,7 @@ class CoursesPage extends React.Component {
             Ajánlott tanfolyamok
           </h2>
 
-          {programme == null ||
-          startYear == null ||
-          (searchTerms.length === 0 && !showAll) ? (
+          {!this.isFormFilledOut() ? (
             <p className={styles.missingSearchFormDataText}>
               Kérlek, töltsd ki a keresési űrlap összes mezőjét!
             </p>

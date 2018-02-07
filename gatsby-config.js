@@ -20,8 +20,15 @@ module.exports = {
     'gatsby-transformer-remark',
     'gatsby-transformer-sharp',
     'gatsby-transformer-yaml',
+    {
+      resolve: 'gatsby-plugin-google-analytics',
+      options: {
+        trackingId: 'UA-113797893-1',
+        anonymize: true,
+      },
+    },
+    'gatsby-plugin-react-helmet',
     'gatsby-plugin-sass',
     'gatsby-plugin-sharp',
-    'gatsby-plugin-react-helmet',
   ],
 };

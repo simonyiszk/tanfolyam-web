@@ -1,0 +1,7 @@
+@import '../utils/flexbox';
+
+.root {
+  display: flex;
+  flex-wrap: wrap;
+  @include gap(0.5rem);
+}

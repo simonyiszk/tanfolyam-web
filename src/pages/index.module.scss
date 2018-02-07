@@ -16,7 +16,6 @@
 .searchForm {
   label {
     display: inline-block;
-    margin-right: 1em;
 
     input[type='checkbox'],
     input[type='radio'] {
@@ -32,5 +31,5 @@
 .showAllBox {
   display: flex;
   justify-content: flex-end;
-  padding-top: 0.5em;
+  margin-top: 1rem;
 }

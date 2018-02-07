@@ -4,7 +4,7 @@ import FaEnvelope from 'react-icons/lib/fa/envelope';
 import FaFacebookOfficial from 'react-icons/lib/fa/facebook-official';
 import FaGitHub from 'react-icons/lib/fa/github';
 import FaYouTubePlay from 'react-icons/lib/fa/youtube-play';
-import VIKLogoSrc from '../data/logos/schdesign.svg';
+import BMEVIKLogoSrc from '../data/logos/bme-vik.svg';
 import Container from './Container';
 import styles from './Footer.module.scss';
 
@@ -18,7 +18,11 @@ const Footer = ({
 }) => (
   <footer className={`${styles.root} ${className}`} {...props}>
     <Container>
-      <img src={VIKLogoSrc} alt="BME-VIK" className={styles.logo} />
+      <img
+        src={BMEVIKLogoSrc}
+        alt="BME Villamosmérnöki és Informatikai Kar"
+        className={styles.logo}
+      />
 
       <div className={styles.iconsContainer}>
         <a href={siteFacebookURL} target="_blank" rel="noopener noreferrer">

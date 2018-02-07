@@ -193,6 +193,11 @@ class CoursesPage extends React.Component {
                   multi
                   options={allTags.map(tag => ({ value: tag, label: tag }))}
                   value={searchTerms}
+                  clearAllText="Összes törlése"
+                  clearValueText="Érték törlése"
+                  noResultsText="Nincs találat"
+                  placeholder="Válassz…"
+                  searchPromptText="Írj a kereséshez"
                   onChange={this.handleSearchTermsChange}
                 />
                 <div className={styles.showAllBox}>

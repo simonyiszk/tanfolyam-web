@@ -59,7 +59,7 @@ class CoursesPage extends React.Component {
         prevState.searchTerms !== searchTerms ||
         prevState.showAll !== showAll)
     ) {
-      fetch('http://152.66.211.46:13420', {
+      fetch('https://tanfolyam.kir-dev.sch.bme.hu', {
         method: 'POST',
         body: JSON.stringify({
           programme,

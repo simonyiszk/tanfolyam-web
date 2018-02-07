@@ -8,8 +8,8 @@ occasions:
     instructors:
       - Tóth Bence
       - Kecskés Dániel
-  - startDate: "2018-02-28T18:00Z"
-    endDate: "2018-02-28T21:00Z"
+  - startDate: "2018-02-28T20:00Z"
+    endDate: "2018-02-28T23:00Z"
     location: SCH103
     instructors:
       - Tóth Bence

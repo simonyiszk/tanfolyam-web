@@ -2,8 +2,8 @@
 title: Webes alapozó
 society: Kir-Dev
 occasions:
-  - startDate: "2018-02-13T18:00Z"
-    endDate: "2018-02-13T21:00Z"
+  - startDate: "2018-02-13T17:45Z"
+    endDate: "2018-02-13T20:30Z"
     location: SCH 103
     instructors:
       - Salamon Dorottya
@@ -19,4 +19,4 @@ tags:
   - frontend
 ---
 
-A tanfolyamon résztvevők megismerkedhetnek a web működésével, a HTML és a CSS világával. Az alkalom végén egy gyakorlati workshop keretein belül mélyíthetik el tudásukat.
+A tanfolyamon résztvevők megismerkedhetnek a web működésével, a HTML és a CSS világával. Az alkalom végén egy gyakorlati workshop keretein belül mélyíthetik el tudásukat a résztvevők.

@@ -2,10 +2,11 @@
 @import '../utils/flexbox';
 
 .gappyContainer {
+  @include gap(1rem 3rem);
+
   @include media-breakpoint-up(lg) {
     display: flex;
     flex-wrap: wrap;
-    @include gap(1rem 3rem);
 
     > * {
       flex: 0 0 50%;

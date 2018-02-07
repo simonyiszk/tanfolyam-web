@@ -9,8 +9,8 @@ occasions:
       - Salamon Dorottya
       - Király Bálint
       - Falusi Dávid
-moreInfoURL: http://kir-dev.github.io/tanfolyam/
-applicationFormURL: http://kir-dev.github.io/tanfolyam/
+moreInfoURL: https://kir-dev.github.io/tanfolyam
+applicationFormURL: https://goo.gl/forms/y9MzMUaA14v5lUOw2
 tags:
   - web
   - html

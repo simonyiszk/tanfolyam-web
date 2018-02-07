@@ -2,24 +2,16 @@
 title: Operatőr tanfolyam
 society: BSS
 occasions:
-  - startDate: "2018-02-20T18:00Z"
-    endDate: "2018-02-20T20:00Z"
+  - startDate: "2018-02-14T18:00Z"
     location: SCH 102
-    instructors: null
   - startDate: "2018-02-21T18:00Z"
-    endDate: "2018-02-21T20:00Z"
     location: SCH 102
-    instructors: null
   - startDate: "2018-02-28T18:00Z"
-    endDate: "2018-02-28T20:00Z"
     location: SCH 102
-    instructors: null
   - startDate: "2018-03-07T18:00Z"
-    endDate: "2018-03-07T20:00Z"
     location: SCH 102
-    instructors: null
-moreInfoURL: http://bss.sch.bme.hu/operator 
-applicationFormURL: null
+moreInfoURL: http://bss.sch.bme.hu/operator
+applicationFormURL: http://bss.sch.bme.hu/tanfolyamok
 tags:
   - kamera
   - operatőr

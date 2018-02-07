@@ -18,11 +18,17 @@ const Footer = ({
 }) => (
   <footer className={`${styles.root} ${className}`} {...props}>
     <Container>
-      <img
-        src={BMEVIKLogoSrc}
-        alt="BME Villamosmérnöki és Informatikai Kar"
-        className={styles.logo}
-      />
+      <a
+        href="https://www.vik.bme.hu"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <img
+          src={BMEVIKLogoSrc}
+          alt="BME Villamosmérnöki és Informatikai Kar"
+          className={styles.logo}
+        />
+      </a>
 
       <div className={styles.iconsContainer}>
         <a href={siteFacebookURL} target="_blank" rel="noopener noreferrer">

@@ -1,4 +1,5 @@
 module.exports = {
+  pathPrefix: '/tanfolyam',
   siteMetadata: {
     title: 'Simonyi Károly Szakkollégium',
     siteEmailURL: 'mailto:info@simonyi.bme.hu',

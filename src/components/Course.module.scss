@@ -2,8 +2,9 @@
 
 .metadataContainer {
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  justify-content: space-between;
+
   @include gap(1rem);
 }
 
@@ -13,9 +14,9 @@
 
 .metadataList {
   position: relative;
-  list-style: none;
   padding-left: 1.75em;
   line-height: 1.5;
+  list-style: none;
 
   li::before {
     position: absolute;
@@ -60,8 +61,8 @@
 }
 
 .buttonsContainer {
-  text-align: right;
   margin: 0.5em -1em -0.5em -1em;
+  text-align: right;
 
   > * {
     margin: 0.5em 1em;

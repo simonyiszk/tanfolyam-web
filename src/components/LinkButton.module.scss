@@ -1,13 +1,13 @@
 .root {
   display: inline-block;
-  border: 0.25em black solid;
   padding: 0.5em 1em;
+  border: 0.25em black solid;
   color: black;
   font-weight: bold;
 
   &:hover {
-    color: white;
     background: black;
+    color: white;
     text-decoration: none;
   }
 }

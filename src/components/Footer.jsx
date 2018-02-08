@@ -5,6 +5,7 @@ import FaFacebookOfficial from 'react-icons/lib/fa/facebook-official';
 import FaGitHub from 'react-icons/lib/fa/github';
 import FaYouTubePlay from 'react-icons/lib/fa/youtube-play';
 import BMEVIKLogoSrc from '../data/logos/bme-vik.svg';
+import SchonherzLogoSrc from '../data/logos/schonherz.svg';
 import Container from './Container';
 import styles from './Footer.module.scss';
 
@@ -29,6 +30,8 @@ const Footer = ({
           className={styles.logo}
         />
       </a>
+
+      <img src={SchonherzLogoSrc} alt="Schönherz" className={styles.logo} />
 
       <div className={styles.iconsContainer}>
         <a href={siteFacebookURL} target="_blank" rel="noopener noreferrer">

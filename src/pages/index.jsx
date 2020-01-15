@@ -3,7 +3,6 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import Helmet from 'react-helmet';
 import Select from 'react-select';
-import 'react-select/dist/react-select.css';
 import Container from '../components/Container';
 import MultipleChoiceInputGroup from '../components/MultipleChoiceInputGroup';
 import Course from '../components/Course';
@@ -28,27 +27,30 @@ class CoursesPage extends React.Component {
 
     const { data } = props;
 
-    this.allTags = Array.from(data.courses.edges.reduce((accumulator, { node }) => {
-      // Count the global occurrence of each tag
-      node.frontmatter.tags.forEach((tag) => {
-        accumulator.set(tag, (accumulator.get(tag) || 0) + 1);
-      });
-      return accumulator;
-    }, new Map()))
+    this.allTags = Array.from(
+      data.courses.edges.reduce((accumulator, { node }) => {
+        // Count the global occurrence of each tag
+        node.frontmatter.tags.forEach(tag => {
+          accumulator.set(tag, (accumulator.get(tag) || 0) + 1);
+        });
+        return accumulator;
+      }, new Map()),
+    )
       .sort(([tag1, occurrenceCount1], [tag2, occurrenceCount2]) =>
         // Sort tags by occurrence count (descending) and then by name (ascending)
-        (occurrenceCount1 !== occurrenceCount2
+        occurrenceCount1 !== occurrenceCount2
           ? occurrenceCount2 - occurrenceCount1
-          : tag1.localeCompare(tag2)))
-      .map(([tag]) =>
-        // Drop occurrence counts
-        tag);
+          : tag1.localeCompare(tag2),
+      )
+      .map(
+        ([tag]) =>
+          // Drop occurrence counts
+          tag,
+      );
   }
-
+  /*
   componentDidUpdate(prevProps, prevState) {
-    const {
-      programme, startYear, searchTerms, showAll,
-    } = this.state;
+    const { programme, startYear, searchTerms, showAll } = this.state;
 
     const searchTermValues = searchTerms.map(({ value }) => value);
 
@@ -72,7 +74,7 @@ class CoursesPage extends React.Component {
         }),
       }).catch(() => {});
     }
-  }
+  }*/
 
   handleInputChange(event) {
     const { target } = event;
@@ -91,9 +93,7 @@ class CoursesPage extends React.Component {
   }
 
   isFormFilledOut() {
-    const {
-      programme, startYear, searchTerms, showAll,
-    } = this.state;
+    const { programme, startYear, searchTerms, showAll } = this.state;
 
     return (
       programme != null &&
@@ -105,9 +105,7 @@ class CoursesPage extends React.Component {
   render() {
     const { data } = this.props;
     const { allTags } = this;
-    const {
-      programme, startYear, searchTerms, showAll,
-    } = this.state;
+    const { programme, startYear, searchTerms, showAll } = this.state;
 
     const searchTermValues = searchTerms.map(({ value }) => value);
 
@@ -156,17 +154,17 @@ class CoursesPage extends React.Component {
                 >
                   <RadioButton
                     value="computerEngineering"
-                    checked={programme === 'computerEngineering'}
+                    defaultChecked={programme === 'computerEngineering'}
                     label="Mérnökinformatikus"
                   />
                   <RadioButton
                     value="electricalEngineering"
-                    checked={programme === 'electricalEngineering'}
+                    defaultChecked={programme === 'electricalEngineering'}
                     label="Villamosmérnök"
                   />
                   <RadioButton
                     value="other"
-                    checked={programme === 'other'}
+                    defaultChecked={programme === 'other'}
                     label="Egyéb"
                   />
                 </MultipleChoiceInputGroup>
@@ -179,12 +177,21 @@ class CoursesPage extends React.Component {
                   name="startYear"
                   onChange={this.handleInputChange}
                 >
-                  <RadioButton value="2017" checked={startYear === '2017'} />
-                  <RadioButton value="2016" checked={startYear === '2016'} />
-                  <RadioButton value="2015" checked={startYear === '2015'} />
+                  <RadioButton
+                    value="2017"
+                    defaultChecked={startYear === '2017'}
+                  />
+                  <RadioButton
+                    value="2016"
+                    defaultChecked={startYear === '2016'}
+                  />
+                  <RadioButton
+                    value="2015"
+                    defaultChecked={startYear === '2015'}
+                  />
                   <RadioButton
                     value="other"
-                    checked={startYear === 'other'}
+                    defaultChecked={startYear === 'other'}
                     label="Egyéb"
                   />
                 </MultipleChoiceInputGroup>
@@ -194,7 +201,7 @@ class CoursesPage extends React.Component {
                 <legend>Milyen témakörök iránt érdeklődsz?</legend>
 
                 <Select
-                  multi
+                  isMulti
                   options={allTags.map(tag => ({ value: tag, label: tag }))}
                   value={searchTerms}
                   clearAllText="Összes törlése"
@@ -209,7 +216,7 @@ class CoursesPage extends React.Component {
                     name="showAll"
                     onChange={this.handleInputChange}
                     value="showAllCourse"
-                    checked={showAll}
+                    defaultChecked={showAll}
                     label="Mutass mindent"
                   />
                 </div>
@@ -234,11 +241,13 @@ class CoursesPage extends React.Component {
             <div className={styles.gappyContainer}>
               {data.courses.edges
                 .filter(({ node }) =>
-                    // Show every course which has at least one of the desired tags
-                    (showAll
-                      ? true
-                      : node.frontmatter.tags.some(tag =>
-                          searchTermValues.includes(tag))))
+                  // Show every course which has at least one of the desired tags
+                  showAll
+                    ? true
+                    : node.frontmatter.tags.some(tag =>
+                        searchTermValues.includes(tag),
+                      ),
+                )
                 .sort((a, b) => {
                   // Sort results by relevance
                   // TODO: Improve performance
@@ -256,9 +265,7 @@ class CoursesPage extends React.Component {
                 })
                 .map(({ node }) => (
                   <Course
-                    key={`${node.frontmatter.society.id}__${
-                      node.frontmatter.title
-                    }`}
+                    key={`${node.frontmatter.society.id}__${node.frontmatter.title}`}
                     title={node.frontmatter.title}
                     society={node.frontmatter.society}
                     occasions={node.frontmatter.occasions}

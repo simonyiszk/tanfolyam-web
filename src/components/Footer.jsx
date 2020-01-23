@@ -1,9 +1,9 @@
 import PropTypes from 'prop-types';
 import React from 'react';
-import FaEnvelope from 'react-icons/lib/fa/envelope';
-import FaFacebookOfficial from 'react-icons/lib/fa/facebook-official';
-import FaGitHub from 'react-icons/lib/fa/github';
-import FaYouTubePlay from 'react-icons/lib/fa/youtube-play';
+import { FaEnvelope } from 'react-icons/fa';
+import { FaFacebook } from 'react-icons/fa';
+import { FaGithub } from 'react-icons/fa';
+import { FaYoutube } from 'react-icons/fa';
 import BMEVIKLogoSrc from '../data/logos/bme-vik.svg';
 import SchonherzLogoSrc from '../data/logos/schonherz.svg';
 import Container from './Container';
@@ -35,15 +35,15 @@ const Footer = ({
 
       <div className={styles.iconsContainer}>
         <a href={siteFacebookURL} target="_blank" rel="noopener noreferrer">
-          <FaFacebookOfficial />
+          <FaFacebook />
         </a>
 
         <a href={siteYouTubeURL} target="_blank" rel="noopener noreferrer">
-          <FaYouTubePlay />
+          <FaYoutube />
         </a>
 
         <a href={siteGitHubURL} target="_blank" rel="noopener noreferrer">
-          <FaGitHub />
+          <FaGithub />
         </a>
 
         <a href={siteEmailURL}>

@@ -2,8 +2,8 @@
 title: Jelek encouragement
 society: SEM
 occasions:
-  - startDate: "2018-02-07T18:00Z"
-    endDate: "2018-02-07T20:00Z"
+  - startDate: '2018-02-07T18:00Z'
+    endDate: '2018-02-07T20:00Z'
     location: SCH 102
     instructors:
       - Kiss Ádám

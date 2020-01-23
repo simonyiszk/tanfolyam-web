@@ -1,0 +1,11 @@
+{
+  // Enable automatic file formatting and fixing
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.formatOnSave": true,
+  "editor.codeActionsOnSave": {
+    "source.fixAll": true
+  },
+
+  // Avoid formatting script files with both ESLint and Prettier
+  "[javascript]": { "editor.formatOnSave": false }
+}

@@ -2,8 +2,8 @@
 title: Webes alapozó
 society: Kir-Dev
 occasions:
-  - startDate: "2018-02-13T17:45Z"
-    endDate: "2018-02-13T20:30Z"
+  - startDate: '2018-02-13T17:45Z'
+    endDate: '2018-02-13T20:30Z'
     location: SCH 103
     instructors:
       - Salamon Dorottya

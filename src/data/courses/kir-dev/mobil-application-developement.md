@@ -2,14 +2,14 @@
 title: Mobil alkalmazás fejlesztés
 society: Kir-Dev
 occasions:
-  - startDate: "2018-02-21T20:00Z"
-    endDate: "2018-02-21T23:00Z"
+  - startDate: '2018-02-21T20:00Z'
+    endDate: '2018-02-21T23:00Z'
     location: SCH103
     instructors:
       - Tóth Bence
       - Kecskés Dániel
-  - startDate: "2018-02-28T20:00Z"
-    endDate: "2018-02-28T23:00Z"
+  - startDate: '2018-02-28T20:00Z'
+    endDate: '2018-02-28T23:00Z'
     location: SCH103
     instructors:
       - Tóth Bence

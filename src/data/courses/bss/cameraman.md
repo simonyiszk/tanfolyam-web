@@ -2,13 +2,13 @@
 title: Operatőr tanfolyam
 society: BSS
 occasions:
-  - startDate: "2018-02-14T18:00Z"
+  - startDate: '2018-02-14T18:00Z'
     location: SCH 102
-  - startDate: "2018-02-21T18:00Z"
+  - startDate: '2018-02-21T18:00Z'
     location: SCH 102
-  - startDate: "2018-02-28T18:00Z"
+  - startDate: '2018-02-28T18:00Z'
     location: SCH 102
-  - startDate: "2018-03-07T18:00Z"
+  - startDate: '2018-03-07T18:00Z'
     location: SCH 102
 moreInfoURL: http://bss.sch.bme.hu/operator
 applicationFormURL: http://bss.sch.bme.hu/tanfolyamok

@@ -2,9 +2,7 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import styles from './LinkButton.module.scss';
 
-const LinkButton = ({
-  href, children, className, ...props
-}) => (
+const LinkButton = ({ href, children, className, ...props }) => (
   <a
     href={href}
     role="button"

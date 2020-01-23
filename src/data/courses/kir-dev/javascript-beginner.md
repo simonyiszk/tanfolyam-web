@@ -2,8 +2,8 @@
 title: JavaScript alapozó
 society: Kir-Dev
 occasions:
-  - startDate: "2018-02-18T17:00Z"
-    endDate: "2018-02-18T20:00Z"
+  - startDate: '2018-02-18T17:00Z'
+    endDate: '2018-02-18T20:00Z'
     location: SCH 103
     instructors:
       - Fenyvesi Péter

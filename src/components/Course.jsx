@@ -16,8 +16,8 @@ const Course = ({
 }) => {
   // An `endDate` shall only be specified along with a `startDate`
   const occasionTexts = occasions
-    .filter((occasion) => occasion.dateText != null || occasion.startDate != null)
-    .map((occasion) => {
+    .filter(occasion => occasion.dateText != null || occasion.startDate != null)
+    .map(occasion => {
       if (occasion.dateText != null) {
         return <div key={occasion.dateText}>{occasion.dateText}</div>;
       }
@@ -35,9 +35,15 @@ const Course = ({
       return <div key={result}>{result}</div>;
     });
 
-  const instructorTexts = Array.from(new Set(flatten(occasions
-    .filter((occasion) => occasion.instructors != null)
-    .map((occasion) => occasion.instructors))));
+  const instructorTexts = Array.from(
+    new Set(
+      flatten(
+        occasions
+          .filter(occasion => occasion.instructors != null)
+          .map(occasion => occasion.instructors),
+      ),
+    ),
+  );
 
   return (
     <article {...props}>
@@ -126,7 +132,12 @@ const Course = ({
 
 Course.propTypes = {
   title: PropTypes.string.isRequired,
-  society: PropTypes.shape({}).isRequired,
+  society: PropTypes.shape({
+    id: PropTypes.string.isRequired,
+    title: PropTypes.string.isRequired,
+    logo: PropTypes.string.isRequired,
+    website: PropTypes.string.isRequired,
+  }).isRequired,
   occasions: PropTypes.arrayOf(PropTypes.shape({})).isRequired,
   moreInfoURL: PropTypes.string,
   applicationFormURL: PropTypes.string,

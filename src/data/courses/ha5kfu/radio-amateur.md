@@ -2,7 +2,7 @@
 title: Rádió amatőr tanfolyam
 society: HA5KFU
 occasions:
-  - startDate: "2018-02-19T18:00Z"
+  - startDate: '2018-02-19T18:00Z'
     location: SCH 102
 applicationFormURL: https://docs.google.com/forms/d/e/1FAIpQLSfXhALHtKwGQPwZgLfivMpLN23qMYJciGx6_r93YaZ8fUayAA/viewform?usp=sf_link
 tags:

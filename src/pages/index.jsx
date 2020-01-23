@@ -1,4 +1,4 @@
-import uuidv4 from 'uuid/v4';
+// import uuidv4 from 'uuid/v4';
 import PropTypes from 'prop-types';
 import React from 'react';
 import Helmet from 'react-helmet';
@@ -11,7 +11,7 @@ import RadioButton from '../components/RadioButton';
 import Checkbox from '../components/Checkbox';
 import styles from './index.module.scss';
 
-const sessionID = uuidv4();
+// const sessionID = uuidv4();
 
 class CoursesPage extends React.Component {
   constructor(props) {
@@ -75,7 +75,7 @@ class CoursesPage extends React.Component {
         }),
       }).catch(() => {});
     }
-  }*/
+  } */
 
   handleInputChange(event) {
     const { target } = event;
@@ -287,7 +287,15 @@ class CoursesPage extends React.Component {
 }
 
 CoursesPage.propTypes = {
-  data: PropTypes.shape({}).isRequired,
+  data: PropTypes.shape({
+    courses: PropTypes.shape({
+      edges: PropTypes.arrayOf(
+        PropTypes.shape({
+          node: PropTypes.shape({}).isRequired,
+        }).isRequired,
+      ).isRequired,
+    }).isRequired,
+  }).isRequired,
 };
 
 export default CoursesPage;

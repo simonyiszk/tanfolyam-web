@@ -9,8 +9,8 @@ A Simonyi Károly Szakkollégium tanfolyamhirdető weboldala.
 
 A weboldal statikusan kiszolgálható változatának elkészítéséhez az alábbi fejlesztői eszközök szükségesek:
 
-* [Node.js][]
-* [Yarn][]
+- [Node.js][]
+- [Yarn][]
 
 A projekt főkönyvtárában a függőségek telepítését (`yarn`) követően a `yarn build` parancs kiadására létrejön egy `public` mappa, melynek tartalma egy statikus fájlszerveren keresztül osztható meg a weboldal látogatóival.
 

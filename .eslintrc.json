@@ -18,6 +18,8 @@
         "specialLink": ["to"],
         "aspects": ["noHref", "invalidHref", "preferButton"]
       }
-    ]
+    ],
+    "linebreak-style": 0,
+    "react/jsx-props-no-spreading": "off"
   }
 }

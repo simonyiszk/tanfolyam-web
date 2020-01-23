@@ -1,9 +1,8 @@
 import PropTypes from 'prop-types';
 import React from 'react';
-import { FaEnvelope } from 'react-icons/fa';
-import { FaFacebook } from 'react-icons/fa';
-import { FaGithub } from 'react-icons/fa';
-import { FaYoutube } from 'react-icons/fa';
+import {
+  FaEnvelope, FaFacebook, FaGithub, FaYoutube,
+} from 'react-icons/fa';
 import BMEVIKLogoSrc from '../data/logos/bme-vik.svg';
 import SchonherzLogoSrc from '../data/logos/schonherz.svg';
 import Container from './Container';

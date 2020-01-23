@@ -6,11 +6,10 @@ const MultipleChoiceInputGroup = ({
   name, children, className, ...props
 }) => (
   <div className={`${styles.root} ${className}`} {...props}>
-    {React.Children.map(children, (input, i) =>
-      React.cloneElement(input, {
-        id: input.props.id != null ? input.props.id : `${name}__${i}`,
-        name,
-      }))}
+    {React.Children.map(children, (input, i) => React.cloneElement(input, {
+      id: input.props.id != null ? input.props.id : `${name}__${i}`,
+      name,
+    }))}
   </div>
 );
 

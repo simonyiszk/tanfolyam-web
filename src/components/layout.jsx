@@ -2,8 +2,8 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import Helmet from 'react-helmet';
 import { StaticQuery, graphql } from 'gatsby';
-import BrandedHero from '../components/BrandedHero';
-import Footer from '../components/Footer';
+import BrandedHero from './BrandedHero';
+import Footer from './Footer';
 import SimonyiLightLogoSrc from '../data/logos/simonyi-light.svg';
 import styles from './layout.module.scss';
 import './index.scss';
@@ -33,7 +33,7 @@ const IndexLayout = ({ children }) => (
         }
       }
     `}
-    render={data => (
+    render={(data) => (
       <div className={styles.root}>
         <Helmet
           titleTemplate={`%s | ${data.site.siteMetadata.title}`}

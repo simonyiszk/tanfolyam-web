@@ -2,20 +2,20 @@
 title: Robotika tanfolyam
 society: LEGO
 occasions:
-  - startDate: "2018-02-20T18:00Z"
-    endDate: "2018-02-20T20:00Z"
+  - startDate: '2018-02-20T18:00Z'
+    endDate: '2018-02-20T20:00Z'
     location: SCH 103
-  - startDate: "2018-02-27T18:00Z"
-    endDate: "2018-02-27T20:00Z"
+  - startDate: '2018-02-27T18:00Z'
+    endDate: '2018-02-27T20:00Z'
     location: SCH 103
-  - startDate: "2018-03-06T18:00Z"
-    endDate: "2018-03-06T20:00Z"
+  - startDate: '2018-03-06T18:00Z'
+    endDate: '2018-03-06T20:00Z'
     location: SCH 103
-  - startDate: "2018-03-13T18:00Z"
-    endDate: "2018-03-13T20:00Z"
+  - startDate: '2018-03-13T18:00Z'
+    endDate: '2018-03-13T20:00Z'
     location: SCH 103
-  - startDate: "2018-03-20T18:00Z"
-    endDate: "2018-03-20T20:00Z"
+  - startDate: '2018-03-20T18:00Z'
+    endDate: '2018-03-20T20:00Z'
     location: SCH 103
 applicationFormURL: http://legokor.hu/tanfolyam/
 tags:

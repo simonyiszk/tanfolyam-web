@@ -75,7 +75,7 @@ class CoursesPage extends React.Component {
         }),
       }).catch(() => {});
     }
-  }*/
+  } */
 
   handleInputChange(event) {
     const { target } = event;

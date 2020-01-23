@@ -2,15 +2,15 @@
 title: Szerkesztő-riporter tanfolyam
 society: BSS
 occasions:
-  - startDate: "2018-02-13T19:00Z"
+  - startDate: '2018-02-13T19:00Z'
     location: SCH 106
-  - startDate: "2018-02-20T19:00Z"
+  - startDate: '2018-02-20T19:00Z'
     location: SCH 106
-  - startDate: "2018-02-27T19:00Z"
+  - startDate: '2018-02-27T19:00Z'
     location: SCH 106
-  - startDate: "2018-03-06T19:00Z"
+  - startDate: '2018-03-06T19:00Z'
     location: SCH 106
-moreInfoURL: http://bss.sch.bme.hu/szerkeszto 
+moreInfoURL: http://bss.sch.bme.hu/szerkeszto
 applicationFormURL: http://bss.sch.bme.hu/tanfolyamok
 tags:
   - riport

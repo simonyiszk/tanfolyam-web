@@ -33,7 +33,7 @@ const IndexLayout = ({ children }) => (
         }
       }
     `}
-    render={(data) => (
+    render={data => (
       <div className={styles.root}>
         <Helmet
           titleTemplate={`%s | ${data.site.siteMetadata.title}`}

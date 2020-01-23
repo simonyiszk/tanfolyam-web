@@ -1,9 +1,7 @@
 {
   "root": true,
-  "extends": ["airbnb"],
-  "env": {
-    "browser": true
-  },
+  "env": { "browser": true },
+  "extends": ["airbnb", "plugin:prettier/recommended", "prettier/react"],
   "globals": {
     "graphql": true
   },

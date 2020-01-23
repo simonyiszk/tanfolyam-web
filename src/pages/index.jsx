@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import Helmet from 'react-helmet';
 import Select from 'react-select';
+import Layout from '../components/layout';
 import Container from '../components/Container';
 import MultipleChoiceInputGroup from '../components/MultipleChoiceInputGroup';
 import Course from '../components/Course';
@@ -110,175 +111,177 @@ class CoursesPage extends React.Component {
     const searchTermValues = searchTerms.map(({ value }) => value);
 
     return (
-      <Container>
-        <Helmet title="Tanfolyamok" />
+      <Layout>
+        <Container>
+          <Helmet title="Tanfolyamok" />
 
-        <div className={styles.gappyContainer}>
-          <div>
-            <h2>
-              <span role="img" aria-label="egy halom könyv">
-                📚
-              </span>{' '}
-              Tanfolyamainkról
-            </h2>
+          <div className={styles.gappyContainer}>
+            <div>
+              <h2>
+                <span role="img" aria-label="egy halom könyv">
+                  📚
+                </span>{' '}
+                Tanfolyamainkról
+              </h2>
 
-            <p>
-              A Villamosmérnöki és Informatikai Karon működő Simonyi Károly
-              Szakkollégium ebben a félévben is rengeteg lehetőséget kínál
-              azoknak, akik szabadidejükben szívesen foglalkoznak szakmai
-              tevékenységekkel. A nálunk zajló munkába legkönnyebben egy
-              tanfolyam elvégzésével tudsz becsatlakozni. Az oldalon a
-              szakkollégium összes induló tanfolyama között böngészhetsz az
-              érdeklődésed alapján, ehhez töltsd ki az űrlapot! Érdemes minél
-              több témakört kiválasztanod, hogy a számodra legmegfelelőbb
-              kurzust találd meg. Ne felejts el jelentkezni és találkozzunk a
-              képzésen!
-            </p>
-          </div>
-
-          <div>
-            <h2>
-              <span role="img" aria-label="nagyítóüveg">
-                🔍
-              </span>{' '}
-              Keresés a tanfolyamok között
-            </h2>
-
-            <form className={styles.searchForm}>
-              <fieldset>
-                <legend>Milyen szakra jársz?</legend>
-
-                <MultipleChoiceInputGroup
-                  name="programme"
-                  onChange={this.handleInputChange}
-                >
-                  <RadioButton
-                    value="computerEngineering"
-                    defaultChecked={programme === 'computerEngineering'}
-                    label="Mérnökinformatikus"
-                  />
-                  <RadioButton
-                    value="electricalEngineering"
-                    defaultChecked={programme === 'electricalEngineering'}
-                    label="Villamosmérnök"
-                  />
-                  <RadioButton
-                    value="other"
-                    defaultChecked={programme === 'other'}
-                    label="Egyéb"
-                  />
-                </MultipleChoiceInputGroup>
-              </fieldset>
-
-              <fieldset>
-                <legend>Melyik évben kezdtél?</legend>
-
-                <MultipleChoiceInputGroup
-                  name="startYear"
-                  onChange={this.handleInputChange}
-                >
-                  <RadioButton
-                    value="2017"
-                    defaultChecked={startYear === '2017'}
-                  />
-                  <RadioButton
-                    value="2016"
-                    defaultChecked={startYear === '2016'}
-                  />
-                  <RadioButton
-                    value="2015"
-                    defaultChecked={startYear === '2015'}
-                  />
-                  <RadioButton
-                    value="other"
-                    defaultChecked={startYear === 'other'}
-                    label="Egyéb"
-                  />
-                </MultipleChoiceInputGroup>
-              </fieldset>
-
-              <fieldset>
-                <legend>Milyen témakörök iránt érdeklődsz?</legend>
-
-                <Select
-                  isMulti
-                  options={allTags.map(tag => ({ value: tag, label: tag }))}
-                  value={searchTerms}
-                  clearAllText="Összes törlése"
-                  clearValueText="Érték törlése"
-                  noResultsText="Nincs találat"
-                  placeholder="Válassz…"
-                  searchPromptText="Írj a kereséshez"
-                  onChange={this.handleSearchTermsChange}
-                />
-                <div className={styles.showAllBox}>
-                  <Checkbox
-                    name="showAll"
-                    onChange={this.handleInputChange}
-                    value="showAllCourse"
-                    defaultChecked={showAll}
-                    label="Mutass mindent"
-                  />
-                </div>
-              </fieldset>
-            </form>
-          </div>
-        </div>
-
-        <div>
-          <h2>
-            <span role="img" aria-label="ötlet">
-              💡
-            </span>{' '}
-            Ajánlott tanfolyamok
-          </h2>
-
-          {!this.isFormFilledOut() ? (
-            <p className={styles.missingSearchFormDataText}>
-              Kérlek, töltsd ki a keresési űrlap összes mezőjét!
-            </p>
-          ) : (
-            <div className={styles.gappyContainer}>
-              {data.courses.edges
-                .filter(({ node }) =>
-                  // Show every course which has at least one of the desired tags
-                  showAll
-                    ? true
-                    : node.frontmatter.tags.some(tag =>
-                        searchTermValues.includes(tag),
-                      ),
-                )
-                .sort((a, b) => {
-                  // Sort results by relevance
-                  // TODO: Improve performance
-                  const node1Relevance = a.node.frontmatter.tags.reduce(
-                    (accumulator, tag) =>
-                      accumulator + (searchTermValues.includes(tag) ? 1 : 0),
-                    0,
-                  );
-                  const node2Relevance = b.node.frontmatter.tags.reduce(
-                    (accumulator, tag) =>
-                      accumulator + (searchTermValues.includes(tag) ? 1 : 0),
-                    0,
-                  );
-                  return node2Relevance - node1Relevance;
-                })
-                .map(({ node }) => (
-                  <Course
-                    key={`${node.frontmatter.society.id}__${node.frontmatter.title}`}
-                    title={node.frontmatter.title}
-                    society={node.frontmatter.society}
-                    occasions={node.frontmatter.occasions}
-                    moreInfoURL={node.frontmatter.moreInfoURL}
-                    applicationFormURL={node.frontmatter.applicationFormURL}
-                    tags={node.frontmatter.tags}
-                    descriptionHTML={node.html}
-                  />
-                ))}
+              <p>
+                A Villamosmérnöki és Informatikai Karon működő Simonyi Károly
+                Szakkollégium ebben a félévben is rengeteg lehetőséget kínál
+                azoknak, akik szabadidejükben szívesen foglalkoznak szakmai
+                tevékenységekkel. A nálunk zajló munkába legkönnyebben egy
+                tanfolyam elvégzésével tudsz becsatlakozni. Az oldalon a
+                szakkollégium összes induló tanfolyama között böngészhetsz az
+                érdeklődésed alapján, ehhez töltsd ki az űrlapot! Érdemes minél
+                több témakört kiválasztanod, hogy a számodra legmegfelelőbb
+                kurzust találd meg. Ne felejts el jelentkezni és találkozzunk a
+                képzésen!
+              </p>
             </div>
-          )}
-        </div>
-      </Container>
+
+            <div>
+              <h2>
+                <span role="img" aria-label="nagyítóüveg">
+                  🔍
+                </span>{' '}
+                Keresés a tanfolyamok között
+              </h2>
+
+              <form className={styles.searchForm}>
+                <fieldset>
+                  <legend>Milyen szakra jársz?</legend>
+
+                  <MultipleChoiceInputGroup
+                    name="programme"
+                    onChange={this.handleInputChange}
+                  >
+                    <RadioButton
+                      value="computerEngineering"
+                      defaultChecked={programme === 'computerEngineering'}
+                      label="Mérnökinformatikus"
+                    />
+                    <RadioButton
+                      value="electricalEngineering"
+                      defaultChecked={programme === 'electricalEngineering'}
+                      label="Villamosmérnök"
+                    />
+                    <RadioButton
+                      value="other"
+                      defaultChecked={programme === 'other'}
+                      label="Egyéb"
+                    />
+                  </MultipleChoiceInputGroup>
+                </fieldset>
+
+                <fieldset>
+                  <legend>Melyik évben kezdtél?</legend>
+
+                  <MultipleChoiceInputGroup
+                    name="startYear"
+                    onChange={this.handleInputChange}
+                  >
+                    <RadioButton
+                      value="2017"
+                      defaultChecked={startYear === '2017'}
+                    />
+                    <RadioButton
+                      value="2016"
+                      defaultChecked={startYear === '2016'}
+                    />
+                    <RadioButton
+                      value="2015"
+                      defaultChecked={startYear === '2015'}
+                    />
+                    <RadioButton
+                      value="other"
+                      defaultChecked={startYear === 'other'}
+                      label="Egyéb"
+                    />
+                  </MultipleChoiceInputGroup>
+                </fieldset>
+
+                <fieldset>
+                  <legend>Milyen témakörök iránt érdeklődsz?</legend>
+
+                  <Select
+                    isMulti
+                    options={allTags.map(tag => ({ value: tag, label: tag }))}
+                    value={searchTerms}
+                    clearAllText="Összes törlése"
+                    clearValueText="Érték törlése"
+                    noResultsText="Nincs találat"
+                    placeholder="Válassz…"
+                    searchPromptText="Írj a kereséshez"
+                    onChange={this.handleSearchTermsChange}
+                  />
+                  <div className={styles.showAllBox}>
+                    <Checkbox
+                      name="showAll"
+                      onChange={this.handleInputChange}
+                      value="showAllCourse"
+                      defaultChecked={showAll}
+                      label="Mutass mindent"
+                    />
+                  </div>
+                </fieldset>
+              </form>
+            </div>
+          </div>
+
+          <div>
+            <h2>
+              <span role="img" aria-label="ötlet">
+                💡
+              </span>{' '}
+              Ajánlott tanfolyamok
+            </h2>
+
+            {!this.isFormFilledOut() ? (
+              <p className={styles.missingSearchFormDataText}>
+                Kérlek, töltsd ki a keresési űrlap összes mezőjét!
+              </p>
+            ) : (
+              <div className={styles.gappyContainer}>
+                {data.courses.edges
+                  .filter(({ node }) =>
+                    // Show every course which has at least one of the desired tags
+                    showAll
+                      ? true
+                      : node.frontmatter.tags.some(tag =>
+                          searchTermValues.includes(tag),
+                        ),
+                  )
+                  .sort((a, b) => {
+                    // Sort results by relevance
+                    // TODO: Improve performance
+                    const node1Relevance = a.node.frontmatter.tags.reduce(
+                      (accumulator, tag) =>
+                        accumulator + (searchTermValues.includes(tag) ? 1 : 0),
+                      0,
+                    );
+                    const node2Relevance = b.node.frontmatter.tags.reduce(
+                      (accumulator, tag) =>
+                        accumulator + (searchTermValues.includes(tag) ? 1 : 0),
+                      0,
+                    );
+                    return node2Relevance - node1Relevance;
+                  })
+                  .map(({ node }) => (
+                    <Course
+                      key={`${node.frontmatter.society.id}__${node.frontmatter.title}`}
+                      title={node.frontmatter.title}
+                      society={node.frontmatter.society}
+                      occasions={node.frontmatter.occasions}
+                      moreInfoURL={node.frontmatter.moreInfoURL}
+                      applicationFormURL={node.frontmatter.applicationFormURL}
+                      tags={node.frontmatter.tags}
+                      descriptionHTML={node.html}
+                    />
+                  ))}
+              </div>
+            )}
+          </div>
+        </Container>
+      </Layout>
     );
   }
 }

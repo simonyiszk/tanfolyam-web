@@ -132,7 +132,12 @@ const Course = ({
 
 Course.propTypes = {
   title: PropTypes.string.isRequired,
-  society: PropTypes.shape({}).isRequired,
+  society: PropTypes.shape({
+    id: PropTypes.string.isRequired,
+    title: PropTypes.string.isRequired,
+    logo: PropTypes.string.isRequired,
+    website: PropTypes.string.isRequired,
+  }).isRequired,
   occasions: PropTypes.arrayOf(PropTypes.shape({})).isRequired,
   moreInfoURL: PropTypes.string,
   applicationFormURL: PropTypes.string,

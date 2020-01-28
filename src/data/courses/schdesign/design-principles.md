@@ -7,8 +7,6 @@ occasions:
 applicationFormURL: https://goo.gl/forms/vMMt0M19Q4etOPc73
 tags:
   - design
-  - alapok
-  - tipográfia
 ---
 
 A designer workshopsorozat első része, ahol a résztvevők megismerkedhetnek a design alapjaival egy interaktív workshop keretein belül.

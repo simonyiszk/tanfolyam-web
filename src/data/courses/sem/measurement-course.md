@@ -6,8 +6,7 @@ occasions:
 moreInfoURL: https://sem.sch.bme.hu/tanfolyam/#mero_tanf_2018
 applicationFormURL: https://framadate.org/simonyiszk-linux-alapok
 tags:
-  - oszcilloszkóp
-  - négyszögjel
+  - elektronika
 ---
 
 Az előző évi visszajelzések alapján van igény arra, hogy az Alapozó tanfolyam folytatásaként különböző mérési módszereket tekintsünk meg a gyakorlatban. Ennek eredményeként idén megrendezzük a Mérő tanfolyamunkat. A tanfolyam indulása körülbelül a 10. oktatási héten fog megtörténni, valószínű egy alkalmat foglal majd magába. A pontos tematika és időpont függ az Alapozó tanfolyamon lelkes emberek igényeitől, ezeket később közöljük.

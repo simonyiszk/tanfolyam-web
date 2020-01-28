@@ -18,11 +18,7 @@ moreInfoURL: https://kir-dev.github.io/tanfolyam
 applicationFormURL: https://goo.gl/forms/y9MzMUaA14v5lUOw2
 tags:
   - web
-  - javascript
   - programozás
-  - nodejs
-  - mongo
-  - backend
 ---
 
 2 alkalmas NodeJS tanfolyam, melynek megértéséhez szükség van alapvető javascript ismeretekre (ajánlom a javascript alapozó tanfolyamunkat).

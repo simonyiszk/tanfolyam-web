@@ -12,10 +12,7 @@ moreInfoURL: https://kir-dev.github.io/tanfolyam
 applicationFormURL: https://goo.gl/forms/y9MzMUaA14v5lUOw2
 tags:
   - web
-  - javascript
-  - typescript
   - programozás
-  - frontend
 ---
 
 1 alkalmas JavaScript alapozó tanfolyam, amely segít eligazodni a javascript világában. Az alkalom egy workshoppal zárul.

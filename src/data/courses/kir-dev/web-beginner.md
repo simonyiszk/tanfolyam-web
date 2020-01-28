@@ -13,10 +13,7 @@ moreInfoURL: https://kir-dev.github.io/tanfolyam
 applicationFormURL: https://goo.gl/forms/y9MzMUaA14v5lUOw2
 tags:
   - web
-  - html
-  - css
   - programozás
-  - frontend
 ---
 
 A tanfolyamon résztvevők megismerkedhetnek a web működésével, a HTML és a CSS világával. Az alkalom végén egy gyakorlati workshop keretein belül mélyíthetik el tudásukat a résztvevők.

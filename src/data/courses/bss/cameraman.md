@@ -13,10 +13,8 @@ occasions:
 moreInfoURL: http://bss.sch.bme.hu/operator
 applicationFormURL: http://bss.sch.bme.hu/tanfolyamok
 tags:
-  - kamera
-  - operatőr
-  - tv
-  - videó
+  - média
+  - stúdió
 ---
 
 Videófelvételt készíteni valamiről manapság nem nagy dolog. Előkapod a szipi-szupi telódat és pár perc múlva már a YouTube-on nézhetik a haverjaid, ahogy egy koncerten tombolsz.

@@ -6,12 +6,7 @@ occasions:
     location: SCH 102
 applicationFormURL: https://docs.google.com/forms/d/e/1FAIpQLSfXhALHtKwGQPwZgLfivMpLN23qMYJciGx6_r93YaZ8fUayAA/viewform?usp=sf_link
 tags:
-  - rádió
   - elektronika
-  - antenna
-  - jelfeldolgozás
-  - moduláció
-  - sdr
 ---
 
 Szeretnéd megérteni az elektronika egyik legfurcsább és érdekesebb területét?

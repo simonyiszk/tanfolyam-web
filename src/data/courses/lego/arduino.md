@@ -16,7 +16,6 @@ occasions:
     location: IL405
 applicationFormURL: http://legokor.hu/tanfolyam/
 tags:
-  - arduino
   - elektronika
 ---
 

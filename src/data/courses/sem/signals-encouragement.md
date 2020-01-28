@@ -10,8 +10,7 @@ occasions:
 moreInfoURL: http://konzi.vik.hk/konzultaciok/276/jelek-1-encouragement
 applicationFormURL: http://konzi.vik.hk/konzultaciok/276/jelek-1-encouragement
 tags:
-  - grafikonelemzés
-  - LED
+  - elektronika
 ---
 
 A konzultáció célja életközeli témákkal bemutatni a Jelek és rendszerek tárgy fontosságát. Plusz motiváción kívül a résztvevők elmélyedhetnek a grafikonelemzés alapjaiban, mely a félév során segíti majd őket a tárgy teljesítésében.

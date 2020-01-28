@@ -29,9 +29,7 @@ occasions:
 moreInfoURL: https://acstudio.sch.bme.hu/tanfolyam/
 applicationFormURL: https://acstudio.sch.bme.hu/tanfolyam/jelentkezes
 tags:
-  - hangtechnika
-  - fénytechnika
-  - rendezvényhangosítás
+  - média
   - stúdió
 ---
 

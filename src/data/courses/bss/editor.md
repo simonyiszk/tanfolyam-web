@@ -13,10 +13,8 @@ occasions:
 moreInfoURL: http://bss.sch.bme.hu/szerkeszto
 applicationFormURL: http://bss.sch.bme.hu/tanfolyamok
 tags:
-  - riport
-  - interjú
-  - tv
-  - szerkesztés
+  - média
+  - stúdió
 ---
 
 Ki? Mit? Mikor? Hol? Miért? Hogyan?

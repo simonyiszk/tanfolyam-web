@@ -19,9 +19,6 @@ applicationFormURL: https://goo.gl/forms/y9MzMUaA14v5lUOw2
 tags:
   - web
   - programozás
-  - rails
-  - ruby
-  - backend
 ---
 
 A 2 alkalmas Ruby on Rails tanfolyamon megismerkedhettek a nyelv és a keretrendszer adta lehetőségekkel.

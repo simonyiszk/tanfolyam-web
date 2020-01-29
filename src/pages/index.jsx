@@ -1,17 +1,11 @@
-// import uuidv4 from 'uuid/v4';
 import PropTypes from 'prop-types';
 import React from 'react';
 import Helmet from 'react-helmet';
-import Select from 'react-select';
 import Layout from '../components/layout';
 import Container from '../components/Container';
-import MultipleChoiceInputGroup from '../components/MultipleChoiceInputGroup';
 import Course from '../components/Course';
-import RadioButton from '../components/RadioButton';
 import Checkbox from '../components/Checkbox';
 import styles from './index.module.scss';
-
-// const sessionID = uuidv4();
 
 class CoursesPage extends React.Component {
   constructor(props) {
@@ -20,8 +14,7 @@ class CoursesPage extends React.Component {
       filters: [],
     };
 
-    this.handleInputChange = this.handleInputChange.bind(this);
-    this.handleSearchTermsChange = this.handleSearchTermsChange.bind(this);
+    this.handleFilterChange = this.handleFilterChange.bind(this);
 
     const { data } = props;
 
@@ -46,62 +39,24 @@ class CoursesPage extends React.Component {
           tag,
       );
   }
-  /*
-  componentDidUpdate(prevProps, prevState) {
-    const { programme, startYear, searchTerms, showAll } = this.state;
 
-    const searchTermValues = searchTerms.map(({ value }) => value);
+  handleFilterChange(event) {
+    const { checked, value } = event.target;
 
-    if (
-      this.isFormFilledOut() &&
-      (prevState.programme !== programme ||
-        prevState.startYear !== startYear ||
-        prevState.searchTerms !== searchTerms ||
-        prevState.showAll !== showAll)
-    ) {
-      fetch('https://tanfolyam.kir-dev.sch.bme.hu', {
-        method: 'POST',
-        body: JSON.stringify({
-          programme,
-          startYear,
-          searchTerms: searchTermValues,
-          sessionID,
-        }),
-        headers: new Headers({
-          'Content-Type': 'application/json',
-        }),
-      }).catch(() => {});
+    if (checked) {
+      this.setState(prevState => ({
+        filters: [...prevState.filters, value],
+      }));
+    } else {
+      this.setState(prevState => ({
+        filters: prevState.filters.filter(n => n !== value),
+      }));
     }
-  } */
-
-  handleInputChange(event) {
-    const { target } = event;
-    const { name } = target;
-    const value = target.type === 'checkbox' ? target.checked : target.value;
-
-    this.setState({
-      [name]: value,
-    });
-  }
-
-  handleSearchTermsChange(value) {
-    this.setState({
-      searchTerms: value,
-    });
-  }
-
-  isFormFilledOut() {
-    const { programme, startYear, searchTerms, showAll } = this.state;
-
-    return (
-      programme != null &&
-      startYear != null &&
-      (searchTerms.length !== 0 || showAll)
-    );
   }
 
   render() {
     const { data } = this.props;
+    const { allTags } = this;
     const { filters } = this.state;
 
     return (
@@ -139,17 +94,21 @@ class CoursesPage extends React.Component {
               Ajánlott tanfolyamok
             </h2>
 
+            <div className={styles.buttonContainer}>
+              {allTags.map(t => (
+                <Checkbox key={t} value={t} onClick={this.handleFilterChange} />
+              ))}
+            </div>
+
             <div className={styles.gappyContainer}>
               {data.courses.edges
-                /* .filter(({ node }) =>
+                .filter(({ node }) =>
                   // Show every course which has at least one of the desired tags
-                  showAll
+                  filters.length === 0
                     ? true
-                    : node.frontmatter.tags.some(tag =>
-                        searchTermValues.includes(tag),
-                      ),
+                    : node.frontmatter.tags.some(tag => filters.includes(tag)),
                 )
-                .sort((a, b) => {
+                /* .sort((a, b) => {
                   // Sort results by relevance
                   // TODO: Improve performance
                   const node1Relevance = a.node.frontmatter.tags.reduce(

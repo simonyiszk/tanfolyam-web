@@ -14,6 +14,16 @@
   }
 }
 
+.buttonContainer {
+  margin: 1rem -0.5rem 2rem;
+  display: flex;
+  flex-wrap: wrap;
+
+  > * {
+    margin: 0.25rem 0.5rem;
+  }
+}
+
 .searchForm {
   label {
     display: inline-block;

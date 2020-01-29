@@ -3,10 +3,12 @@ import React from 'react';
 import styles from './PostLabeledInput.module.scss';
 
 const PostLabeledInput = ({ id, label, ...props }) => (
-  <label htmlFor={id} className={styles.labeledInput}>
-    <input id={id} {...props} />
-    <span>{label}</span>
-  </label>
+  <div>
+    <label htmlFor={id} className={styles.labeledInput}>
+      <input id={id} {...props} />
+      <span>{label}</span>
+    </label>
+  </div>
 );
 
 PostLabeledInput.propTypes = {

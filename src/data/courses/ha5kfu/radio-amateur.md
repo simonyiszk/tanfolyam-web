@@ -1,15 +1,27 @@
 ---
-title: Rádió amatőr tanfolyam
+title: Rádióamatőr tanfolyam
 society: HA5KFU
 occasions:
-  - startDate: '2018-02-19T18:00Z'
+  - startDate: '2020-02-17T19:00Z'
+    endDate: '2020-02-17T20:30Z'
     location: SCH 102
-applicationFormURL: https://docs.google.com/forms/d/e/1FAIpQLSfXhALHtKwGQPwZgLfivMpLN23qMYJciGx6_r93YaZ8fUayAA/viewform?usp=sf_link
+  - startDate: '2020-02-24T19:00Z'
+    endDate: '2020-02-24T20:30Z'
+    location: SCH 102
+  - startDate: '2020-03-02T19:00Z'
+    endDate: '2020-03-02T20:30Z'
+    location: SCH 102
+  - startDate: '2020-03-09T19:00Z'
+    endDate: '2020-03-09T20:30Z'
+    location: SCH 102
+  - startDate: '2020-03-16T19:00Z'
+    endDate: '2020-03-16T20:30Z'
+    location: SCH 102
+moreInfoURL: https://ha5kfu.hu/tanfolyam
+applicationFormURL: https://forms.gle/Vmf4Pr2iPw1SCxi78
 tags:
   - elektronika
+  - programozás
 ---
 
-Szeretnéd megérteni az elektronika egyik legfurcsább és érdekesebb területét?
-Vagy szeretnél két fénycső teljesitményével Japánnal beszélgetni? Ha igennel feleltél az egyik kérdésre,
-akkor a rádióamatőr tanfolyamot neked találtuk ki. A tanfolyamon megismerkedhetsz az antennák és rádiók működésével,
-elektronikai alapjaival, valamint a rádiók kezelésével és a radióamatőr forgalmazás alapjaival.
+Szeretnéd megérteni az elektronika egyik legfurcsább és érdekesebb területét? Vagy szeretnél két fénycső teljesitményével Japánnal beszélgetni? A tanfolyamon megismerkedhetsz az antennák és rádiók működésével, elektronikai alapjaival, a rádiók kezelésével és a radióamatőr forgalmazás alapjaival, valamint a legújabb szoftverrádiós technológiákkal, amiket az öt elméleti alkalom után gyakorlati alkalmak és workshopok keretében próbálhatsz ki.

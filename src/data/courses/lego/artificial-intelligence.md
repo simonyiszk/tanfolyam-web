@@ -2,19 +2,22 @@
 title: Mesterséges intelligencia workshop
 society: LEGO
 occasions:
-  - startDate: '2018-02-22T17:00Z'
-    endDate: '2018-02-22T19:00Z'
-    location: SCH 103
-  - startDate: '2018-03-01T17:00Z'
-    endDate: '2018-03-01T19:00Z'
-    location: SCH 103
-  - startDate: '2018-03-08T17:00Z'
-    endDate: '2018-03-08T19:00Z'
-    location: SCH 103
-  - startDate: '2018-03-15T17:00Z'
-    endDate: '2018-03-15T19:00Z'
-    location: SCH 103
-applicationFormURL: http://legokor.hu/tanfolyam/
+  - startDate: '2020-03-26T18:00Z'
+    endDate: '2020-03-26T20:00Z'
+    location: SCH103
+  - startDate: '2020-04-02T18:00Z'
+    endDate: '2020-04-02T20:00Z'
+    location: SCH103
+  - startDate: '2020-04-09T18:00Z'
+    endDate: '2020-04-09T20:00Z'
+    location: SCH103
+  - startDate: '2020-04-16T18:00Z'
+    endDate: '2020-04-16T20:00Z'
+    location: SCH103
+  - startDate: '2020-04-23T18:00Z'
+    endDate: '2020-04-23T20:00Z'
+    location: SCH103
+moreInfoURL: http://legokor.hu/tanfolyam/
 tags:
   - programozás
 ---

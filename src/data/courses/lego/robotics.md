@@ -2,22 +2,33 @@
 title: Robotika tanfolyam
 society: LEGO
 occasions:
-  - startDate: '2018-02-20T18:00Z'
-    endDate: '2018-02-20T20:00Z'
-    location: SCH 103
-  - startDate: '2018-02-27T18:00Z'
-    endDate: '2018-02-27T20:00Z'
-    location: SCH 103
-  - startDate: '2018-03-06T18:00Z'
-    endDate: '2018-03-06T20:00Z'
-    location: SCH 103
-  - startDate: '2018-03-13T18:00Z'
-    endDate: '2018-03-13T20:00Z'
-    location: SCH 103
-  - startDate: '2018-03-20T18:00Z'
-    endDate: '2018-03-20T20:00Z'
-    location: SCH 103
-applicationFormURL: http://legokor.hu/tanfolyam/
+  - startDate: '2020-02-20T17:00Z'
+    endDate: '2020-02-20T19:00Z'
+    location: SCH103
+    instructors:
+      - Izsó András
+  - startDate: '2020-02-27T18:00Z'
+    endDate: '2020-02-27T20:00Z'
+    location: SCH103
+    instructors:
+      - Izsó András
+  - startDate: '2020-03-05T18:00Z'
+    endDate: '2020-03-05T20:00Z'
+    location: SCH103
+    instructors:
+      - Izsó András
+  - startDate: '2020-03-12T18:00Z'
+    endDate: '2020-03-12T20:00Z'
+    location: SCH103
+    instructors:
+      - Szilágyi Bence
+  - startDate: '2020-03-19T18:00Z'
+    endDate: '2020-03-19T20:00Z'
+    location: SCH103
+    instructors:
+      - Szilágyi Bence
+moreInfoURL: https://legokor.hu/tanfolyam/
+applicationFormURL: https://forms.gle/pK1N628b6Bj2adYu9
 tags:
   - programozás
 ---

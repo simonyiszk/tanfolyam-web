@@ -2,8 +2,7 @@
 title: Fotós tanfolyam
 society: SPOT
 occasions:
-  - startDate: 2. oktatási hét
-    endDate: 5. oktatási hét
+  - dateText: 2. - 5. oktatási hét
     location: null
     instructors: null
 moreInfoURL: https://spot.sch.bme.hu/tanfolyam

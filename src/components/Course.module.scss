@@ -14,7 +14,7 @@
 
 .metadataList {
   position: relative;
-  padding-left: 1.75em;
+  padding: 0;
   line-height: 1.5;
   list-style: none;
 
@@ -40,6 +40,15 @@
 
 .societyWebsite {
   @include list-item-emoji('🌐');
+}
+
+.courseListContainer {
+  display: flex;
+}
+
+.courseListIcon {
+  flex-shrink: 0;
+  margin-right: 1rem;
 }
 
 .societyLogoContainer {

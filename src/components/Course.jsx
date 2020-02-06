@@ -1,6 +1,7 @@
 import flatten from 'lodash.flatten';
 import PropTypes from 'prop-types';
 import React from 'react';
+import { FaRegClock, FaChalkboardTeacher, FaGlobe } from 'react-icons/fa';
 import styles from './Course.module.scss';
 import LinkButton from './LinkButton';
 
@@ -53,38 +54,38 @@ const Course = ({
 
           <ul className={styles.metadataList}>
             {occasionTexts.length > 0 && (
-              <li className={styles.occasions}>
-                <span
-                  aria-label={`${
-                    occasionTexts.length === 1 ? 'Alkalom' : 'Alkalmak'
-                  }: `}
-                />
-                {occasionTexts}
+              <li className={styles.courseListContainer}>
+                <div className={styles.courseListIcon}>
+                  <FaRegClock />
+                </div>
+                <div>{occasionTexts}</div>
               </li>
             )}
 
             {instructorTexts.length > 0 && (
-              <li className={styles.instructors}>
-                <span
-                  aria-label={`${
-                    instructorTexts.length === 1 ? 'Oktató' : 'Oktatók'
-                  }: `}
-                />
-                {instructorTexts.join(', ')}
+              <li className={styles.courseListContainer}>
+                <div className={styles.courseListIcon}>
+                  <FaChalkboardTeacher />
+                </div>
+                <div>{instructorTexts.join(', ')}</div>
               </li>
             )}
 
             {society.website != null && (
-              <li className={styles.societyWebsite}>
-                <span aria-label="A kör weboldala: " />
-                <a
-                  href={society.website}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  {/* Show the URL without protocol */}
-                  {society.website.replace(/(^\w+:|^)\/\//, '')}
-                </a>
+              <li className={styles.courseListContainer}>
+                <div className={styles.courseListIcon}>
+                  <FaGlobe />
+                </div>
+                <div>
+                  <a
+                    href={society.website}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    {/* Show the URL without protocol */}
+                    {society.website.replace(/(^\w+:|^)\/\//, '')}
+                  </a>
+                </div>
               </li>
             )}
           </ul>

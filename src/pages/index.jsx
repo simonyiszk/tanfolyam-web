@@ -6,6 +6,8 @@ import Container from '../components/Container';
 import Course from '../components/Course';
 import Checkbox from '../components/Checkbox';
 import styles from './index.module.scss';
+import Book from '../data/icons/book.svg';
+import Bulb from '../data/icons/idea.svg';
 
 class CoursesPage extends React.Component {
   constructor(props) {
@@ -65,11 +67,11 @@ class CoursesPage extends React.Component {
           <Helmet title="Tanfolyamok" />
 
           <div>
-            <h2>
-              <span role="img" aria-label="egy halom könyv">
-                📚
-              </span>{' '}
-              Tanfolyamainkról
+            <h2 className={styles.headerContainer}>
+              <div className={styles.headerImageContainer}>
+                <img src={Book} alt="Tanfolyamok" />
+              </div>
+              <div>Tanfolyamainkról</div>
             </h2>
 
             <p>
@@ -87,11 +89,11 @@ class CoursesPage extends React.Component {
           </div>
 
           <div>
-            <h2>
-              <span role="img" aria-label="ötlet">
-                💡
-              </span>{' '}
-              Ajánlott tanfolyamok
+            <h2 className={styles.headerContainer}>
+              <div className={styles.headerImageContainer}>
+                <img src={Bulb} alt="Tanfolyamok" />
+              </div>
+              <div>Ajánlott tanfolyamok</div>
             </h2>
 
             <div className={styles.buttonContainer}>

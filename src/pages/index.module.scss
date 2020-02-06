@@ -24,6 +24,20 @@
   }
 }
 
+.headerContainer {
+  display: flex;
+  align-items: center;
+}
+
+.headerImageContainer {
+  height: 2rem;
+  margin-right: 0.5rem;
+
+  > img {
+    height: 100%;
+  }
+}
+
 .searchForm {
   label {
     display: inline-block;

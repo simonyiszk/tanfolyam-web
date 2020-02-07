@@ -5,8 +5,8 @@ occasions:
   - dateText: 2. - 5. oktatási hét
     location: null
     instructors: null
-moreInfoURL: https://spot.sch.bme.hu/tanfolyam
-applicationFormURL: https://spot.sch.bme.hu/tanfolyam
+moreInfoURL: https://spot.sch.bme.hu/blog/20200203_ujonckepzes/
+applicationFormURL: https://forms.gle/RwjWBdTydF4KRmAf8
 tags:
   - média
 ---

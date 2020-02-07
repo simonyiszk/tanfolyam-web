@@ -1,32 +1,29 @@
 ---
-title: Hangtechnikusi tanfolyam
+title: Alapozó hangtechnikai tanfolyam
 society: AC
 occasions:
-  - startDate: '2018-02-13T18:00Z'
-    endDate: '2018-02-13T20:00Z'
-    location: SCH 102
-    instructors: null
-  - startDate: '2018-02-20T18:00Z'
-    endDate: '2018-02-20T20:00Z'
-    location: SCH 102
-    instructors: null
-  - startDate: '2018-02-27T18:00Z'
-    endDate: '2018-03-27T20:00Z'
-    location: SCH 102
-    instructors: null
-  - startDate: '2018-03-06T18:00Z'
-    endDate: '2018-03-06T20:00Z'
-    location: SCH 102
-    instructors: null
-  - startDate: '2018-03-13T18:00Z'
-    endDate: '2018-03-13T20:00Z'
-    location: SCH 102
-    instructors: null
-  - startDate: '2018-03-20T18:00Z'
-    endDate: '2018-03-20T20:00Z'
-    location: SCH 102
-    instructors: null
-moreInfoURL: https://acstudio.sch.bme.hu/tanfolyam/
+  - startDate: '2020-02-18T18:00:00Z'
+    endDate: '2020-02-18T19:30:00Z'
+    location: SCH102
+  - startDate: '2020-02-25T18:00:00Z'
+    endDate: '2020-02-25T19:30:00Z'
+    location: SCH103
+  - startDate: '2020-03-03T18:00:00Z'
+    endDate: '2020-03-03T19:30:00Z'
+    location: SCH103
+  - startDate: '2020-03-10T18:00:00Z'
+    endDate: '2020-03-10T19:30:00Z'
+    location: SCH103
+  - startDate: '2020-03-17T18:00:00Z'
+    endDate: '2020-03-17T19:30:00Z'
+    location: SCH103
+  - startDate: '2020-03-24T18:00:00Z'
+    endDate: '2020-03-24T19:30:00Z'
+    location: SCH102
+  - startDate: '2020-03-31T18:00:00Z'
+    endDate: '2020-03-31T19:30:00Z'
+    location: SCH102
+moreInfoURL: https://acstudio.sch.bme.hu/tanfolyam
 applicationFormURL: https://acstudio.sch.bme.hu/tanfolyam/jelentkezes
 tags:
   - média

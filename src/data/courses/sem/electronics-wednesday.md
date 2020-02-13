@@ -59,6 +59,7 @@ occasions:
 moreInfoURL: https://sem.sch.bme.hu/tanfolyam/
 tags:
   - elektronika
+  - programozás
 ---
 
 Mint minden tavaszi félévben, idén is megrendezésre kerül az elektronikai alapozó tanfolyam. A tanfolyam keretein belül elsajátíthatók az alapvető analóg elektronikai skillek, valamint a mikrokontrolleres ismeretek. A tanfolyam során a tervező asztaltól a forrasztáson át a programozásig, a tervezés összes lépését átélhetitek.

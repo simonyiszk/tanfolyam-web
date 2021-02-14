@@ -1,6 +1,7 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 import Helmet from 'react-helmet';
+import { graphql } from 'gatsby';
 import Layout from '../components/layout';
 import Container from '../components/Container';
 import Course from '../components/Course';

@@ -1,7 +1,7 @@
 {
   "private": true,
   "scripts": {
-    "build": "gatsby build",
+    "build": "gatsby build --prefix-paths",
     "start": "gatsby develop",
     "develop": "gatsby develop",
     "lint:js": "eslint --ignore-path .gitignore \"**/*.{js,jsx}\"",

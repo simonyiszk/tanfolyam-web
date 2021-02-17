@@ -1,17 +1,17 @@
 ---
-title: Frontend és sitebuild tanfolyam
+title: Webfejlesztés tanfolyam
 society: schdesign
 occasions:
-  - startDate: '2020-03-16T17:00Z'
-    endDate: '2020-03-16T19:00Z'
-    location: SCH103
-  - startDate: '2020-03-18T20:00Z'
-    endDate: '2020-03-18T22:00Z'
-    location: SCH103
+  - startDate: '2021-02-22T19:00Z'
+    endDate: '2021-02-22T21:00Z'
+    location: Discord
+  - startDate: '2021-03-03T19:00Z'
+    endDate: '2021-03-03T21:00Z'
+    location: Discord
 applicationFormURL: https://schdesign.hu/tanfolyam
 tags:
   - design
   - web
 ---
 
-A workshopokon megismerkedhettek a HTML, CSS és JavaScript használatával, hogy a későbbiekben kimagasló minőségű weboldalakat tudjatok készíteni!
+A workshopokon megismerkedhettek a HTML, CSS és JavaScript használatával, hogy a későbbiekben kimagasló minőségű weboldalakat tudjatok készíteni.

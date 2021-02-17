@@ -2,15 +2,15 @@
 title: Illustrator tanfolyam
 society: schdesign
 occasions:
-  - startDate: '2020-03-09T17:00Z'
-    endDate: '2020-03-09T19:00Z'
-    location: SCH103
-  - startDate: '2020-03-11T20:00Z'
-    endDate: '2020-03-11T22:00Z'
-    location: SCH103
+  - startDate: '2021-03-08T19:00Z'
+    endDate: '2021-03-08T21:00Z'
+    location: Discord
+  - startDate: '2021-03-17T19:00Z'
+    endDate: '2021-03-17T21:00Z'
+    location: Discord
 applicationFormURL: https://schdesign.hu/tanfolyam
 tags:
   - design
 ---
 
-A workshopokon megtanulhatjátok az Illustrator használatát és betekintést nyerhettek a vektorgrafika világába!
+A workshopokon megtanulhatjátok az Illustrator használatát és betekintést nyerhettek a vektorgrafika világába.

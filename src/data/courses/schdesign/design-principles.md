@@ -2,12 +2,12 @@
 title: Design Principles
 society: schdesign
 occasions:
-  - startDate: '2020-02-17T17:00Z'
-    endDate: '2020-02-17T19:00Z'
-    location: SCH103
+  - startDate: '2021-02-26T19:00Z'
+    endDate: '2021-02-26T21:00Z'
+    location: Discord
 applicationFormURL: https://schdesign.hu/tanfolyam
 tags:
   - design
 ---
 
-A designer workshopsorozat első része, ahol a résztvevők megismerkedhetnek a design alapjaival egy interaktív workshop keretein belül.
+Rövid bevezetés a design világába. A résztvevők megismerkedhetnek az alapokkal: a színelmélettől kezdve egészen addig, hogy mitől lesz hatásos egy kompozíció.

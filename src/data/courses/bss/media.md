@@ -2,24 +2,24 @@
 title: BSS Tanfolyam
 society: BSS
 occasions:
-  - startDate: '2020-02-23T18:00Z'
-    endDate: '2020-02-23T20:00Z'
+  - startDate: '2021-02-23T18:00Z'
+    endDate: '2021-02-23T20:00Z'
     location: Online
     instructors:
       - Nemes Dávid
-  - startDate: '2020-03-02T18:00Z'
-    endDate: '2020-03-02T20:00Z'
+  - startDate: '2021-03-02T18:00Z'
+    endDate: '2021-03-02T20:00Z'
     location: Online
     instructors:
       - Máté Mónika
       - Molnár B. Dóra
-  - startDate: '2020-03-09T18:00Z'
-    endDate: '2020-03-09T20:00Z'
+  - startDate: '2021-03-09T18:00Z'
+    endDate: '2021-03-09T20:00Z'
     location: Online
     instructors:
       - Nemes Dávid
-  - startDate: '2020-03-16T18:00Z'
-    endDate: '2020-03-16T20:00Z'
+  - startDate: '2021-03-16T18:00Z'
+    endDate: '2021-03-16T20:00Z'
     location: Online
     instructors:
       - Komlós Boldizsár

@@ -2,13 +2,13 @@
 title: Webes alapozó
 society: Kir-Dev
 occasions:
-  - startDate: '2020-02-17T19:00Z'
-    endDate: '2020-02-17T23:00Z'
-    location: SCH 103
+  - startDate: '2021-02-22T18:00Z'
+    endDate: '2021-02-22T20:00Z'
+    location: https://meet.google.com/kfo-azka-wmb
     instructors:
       - Király Bálint
 moreInfoURL: https://kir-dev.github.io/tanfolyam
-applicationFormURL: https://forms.gle/6FkTTuF4uRm689iZA
+applicationFormURL: https://forms.gle/RTjEd1VKEGZDeEwq5
 tags:
   - web
   - programozás

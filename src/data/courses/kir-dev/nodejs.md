@@ -2,23 +2,22 @@
 title: NodeJS
 society: Kir-Dev
 occasions:
-  - startDate: '2020-03-02T19:00Z'
-    endDate: '2020-03-02T22:00Z'
-    location: SCH103
+  - startDate: 'TBA'
+    endDate: 'TBA'
+    location: https://meet.google.com/rao-pdiu-zcx
     instructors:
-      - Fehér János
-  - startDate: '2020-03-09T19:00Z'
-    endDate: '2020-03-09T22:00Z'
-    location: SCH103
+      - Vass Bence
+  - startDate: 'TBA'
+    endDate: 'TBA'
+    location: https://meet.google.com/rao-pdiu-zcx
     instructors:
-      - Fehér János
-  - startDate: '2020-03-16T19:00Z'
-    endDate: '2020-03-16T22:00Z'
-    location: SCH103
+      - Vass Bence
+  - startDate: 'TBA'
+    endDate: 'TBA'
+    location: https://meet.google.com/rao-pdiu-zcx
     instructors:
-      - Fehér János
-moreInfoURL: https://kir-dev.github.io/tanfolyam
-applicationFormURL: https://forms.gle/6FkTTuF4uRm689iZA
+      - Vass Bence
+
 tags:
   - web
   - programozás

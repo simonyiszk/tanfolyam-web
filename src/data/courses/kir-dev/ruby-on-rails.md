@@ -2,26 +2,25 @@
 title: Ruby on Rails
 society: Kir-Dev
 occasions:
-  - startDate: '2020-02-12T19:00Z'
-    endDate: '2020-02-12T22:00Z'
-    location: SCH103
+  - startDate: '2021-02-24T18:00Z'
+    endDate: '2021-02-24T20:00Z'
+    location: https://meet.google.com/kfo-azka-wmb
     instructors:
       - Sepsi László
-  - startDate: '2020-02-19T19:00Z'
-    endDate: '2020-02-19T22:00Z'
-    location: SCH103
+  - startDate: '2021-03-03T18:00Z'
+    endDate: '2021-03-03T20:00Z'
+    location: https://meet.google.com/kfo-azka-wmb
     instructors:
       - Sepsi László
-  - startDate: '2020-02-24T19:00Z'
-    endDate: '2020-02-24T22:00Z'
-    location: SCH103
+  - startDate: '2021-03-10T18:00Z'
+    endDate: '2021-03-10T20:00Z'
+    location: https://meet.google.com/kfo-azka-wmb
     instructors:
       - Sepsi László
-moreInfoURL: https://kir-dev.github.io/tanfolyam
-applicationFormURL: https://forms.gle/6FkTTuF4uRm689iZA
+
 tags:
   - web
   - programozás
 ---
 
-Szeretnél innovatív weboldalakat készíteni? Három alkalmas tanfolyamunk keretében megismerhetsz egy olyan backend frameworkkel, amit többek között a GitHub, Twitch és Kickstarter is használ! A képzés során egy állatmenhely (konzolos) adminisztrációs alkalmazást, valamint egy étterem weboldalát fogjuk elkészíteni. A képzés elvégzése után a résztvevők becsatlakozhatnak többek között a PéK és a Schörpong kör weboldalának a fejlesztésébe is.
+Szeretnél innovatív weboldalakat készíteni villámgyorsan? Három alkalmas tanfolyamunk keretében megismerhetsz egy olyan backend frameworkkel, amit többek között a GitHub, Twitch és Kickstarter is használ! A képzés során egy Neptun-hoz hasonló webalkalmazást fogunk elkészíteni. A képzés elvégzése után a résztvevők becsatlakozhatnak többek között a PéK, KonyhaSCH és a Schörpong kör, valamint Schönherz Airsoft Team weboldalának fejlesztésébe is.

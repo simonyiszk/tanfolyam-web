@@ -12,8 +12,7 @@ occasions:
     location: https://meet.google.com/ocy-msve-ozx
     instructors:
       - Szabó Gergely
-  - startDate: 'TBA'
-    endDate: 'TBA'
+  - dateText: 'TBA'
     location: https://meet.google.com/ocy-msve-ozx
     instructors:
       - Szabó Gergely

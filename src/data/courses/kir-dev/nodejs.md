@@ -2,18 +2,15 @@
 title: NodeJS
 society: Kir-Dev
 occasions:
-  - startDate: 'TBA'
-    endDate: 'TBA'
+  - dateText: 'TBA'
     location: https://meet.google.com/rao-pdiu-zcx
     instructors:
       - Vass Bence
-  - startDate: 'TBA'
-    endDate: 'TBA'
+  - dateText: 'TBA'
     location: https://meet.google.com/rao-pdiu-zcx
     instructors:
       - Vass Bence
-  - startDate: 'TBA'
-    endDate: 'TBA'
+  - dateText: 'TBA'
     location: https://meet.google.com/rao-pdiu-zcx
     instructors:
       - Vass Bence

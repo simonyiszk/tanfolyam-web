@@ -2,23 +2,21 @@
 title: SpringBoot + Kotlin
 society: Kir-Dev
 occasions:
-  - startDate: '2020-02-11T18:00Z'
-    endDate: '2020-02-11T23:00Z'
-    location: SCH103
+  - startDate: '2021-02-23T18:00Z'
+    endDate: '2021-02-23T20:00Z'
+    location: https://meet.google.com/ocy-msve-ozx
     instructors:
       - Szabó Gergely
-  - startDate: '2020-02-18T18:00Z'
-    endDate: '2020-02-18T23:00Z'
-    location: SCH103
+  - startDate: '2021-03-03T18:00Z'
+    endDate: '2021-03-03T20:00Z'
+    location: https://meet.google.com/ocy-msve-ozx
     instructors:
       - Szabó Gergely
-  - startDate: '2020-02-26T18:00Z'
-    endDate: '2020-02-26T23:00Z'
-    location: SCH103
+  - startDate: 'TBA'
+    endDate: 'TBA'
+    location: https://meet.google.com/ocy-msve-ozx
     instructors:
       - Szabó Gergely
-moreInfoURL: https://kir-dev.github.io/tanfolyam
-applicationFormURL: https://forms.gle/6FkTTuF4uRm689iZA
 tags:
   - web
   - programozás

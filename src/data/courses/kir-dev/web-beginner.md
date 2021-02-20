@@ -7,7 +7,7 @@ occasions:
     location: https://meet.google.com/kfo-azka-wmb
     instructors:
       - Király Bálint
-moreInfoURL: https://kir-dev.github.io/tanfolyam
+moreInfoURL: https://www.facebook.com/kirdevteam
 applicationFormURL: https://forms.gle/RTjEd1VKEGZDeEwq5
 tags:
   - web

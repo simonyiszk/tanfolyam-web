@@ -6,14 +6,6 @@ occasions:
     location: https://meet.google.com/rao-pdiu-zcx
     instructors:
       - Vass Bence
-  - dateText: 'TBA'
-    location: https://meet.google.com/rao-pdiu-zcx
-    instructors:
-      - Vass Bence
-  - dateText: 'TBA'
-    location: https://meet.google.com/rao-pdiu-zcx
-    instructors:
-      - Vass Bence
 
 tags:
   - web

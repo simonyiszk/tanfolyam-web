@@ -2,14 +2,20 @@
 title: NodeJS
 society: Kir-Dev
 occasions:
-  - dateText: 'TBA'
+  - startDate: '2021-02-25T18:00Z'
+    endDate: '2021-02-25T20:30Z'
     location: https://meet.google.com/rao-pdiu-zcx
     instructors:
-      - Vass Bence
-
+      - Piller Trisztán
+  - startDate: '2021-03-04T18:00Z'
+    endDate: '2021-03-04T21:00Z'
+    location: https://meet.google.com/rao-pdiu-zcx
+    instructors:
+      - Piller Trisztán
+​
 tags:
   - web
   - programozás
 ---
-
-3 alkalmas NodeJS tanfolyam az alapoktól, amely során megismerkedhedtek a JavaScript és TypeScript alapjaival, az express webes keretrendszerrel, és a funkcionális programozásba is betekintést nyerhettek.
+​
+2 alkalmas NodeJS tanfolyam az alapoktól, amely során megismerkedhettek a TypeScript alapjaival, az expressJS webes keretrendszerrel, és annak middleware struktúrájába. Haladó alkalmunkon belenézünk nehezebb témákba, például az authorizációba, megnézzük, hogy tudunk már folyamatban lévő projektnél bedolgozni. Tanfolyamunk végeztével lehetőséged lesz a Vikoverflow vagy a TanulóSCH projekt kódbázisát bővíteni.

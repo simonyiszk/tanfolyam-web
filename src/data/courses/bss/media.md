@@ -2,27 +2,28 @@
 title: BSS Tanfolyam
 society: BSS
 occasions:
-  - startDate: '2021-02-23T18:00Z'
-    endDate: '2021-02-23T20:00Z'
-    location: Online
+  - startDate: '2022-03-02T18:00Z'
+    endDate: '2022-03-02T20:00Z'
+    location: SCH ENT, BSS stúdió
     instructors:
-      - Nemes Dávid
-  - startDate: '2021-03-02T18:00Z'
-    endDate: '2021-03-02T20:00Z'
-    location: Online
-    instructors:
-      - Máté Mónika
+      - Kozma Benedek
       - Molnár B. Dóra
-  - startDate: '2021-03-09T18:00Z'
-    endDate: '2021-03-09T20:00Z'
-    location: Online
+  - startDate: '2022-03-09T18:00Z'
+    endDate: '2022-03-09T20:00Z'
+    location: SCH ENT, BSS stúdió
     instructors:
-      - Nemes Dávid
-  - startDate: '2021-03-16T18:00Z'
-    endDate: '2021-03-16T20:00Z'
-    location: Online
+      - Csaba Nikolett
+      - Salamon Dóra
+  - startDate: '2022-03-16T18:00Z'
+    endDate: '2022-03-16T20:00Z'
+    location: SCH ENT, BSS stúdió
     instructors:
-      - Komlós Boldizsár
+      - Kozma Benedek
+  - startDate: '2022-03-23T18:00Z'
+    endDate: '2022-03-23T20:00Z'
+    location: SCH ENT, BSS stúdió
+    instructors:
+      - Kozma Benedek
 moreInfoURL: https://bsstudio.hu/tanfolyam
 applicationFormURL: https://bsstudio.hu/tanfolyamok
 tags:

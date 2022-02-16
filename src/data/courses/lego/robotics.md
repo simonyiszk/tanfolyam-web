@@ -2,31 +2,31 @@
 title: Robotika tanfolyam
 society: LEGO
 occasions:
-  - startDate: '2021-03-02T20:00Z'
-    endDate: '2021-03-02T22:00Z'
-    location: Teams
+  - startDate: '2022-03-01T19:00Z'
+    endDate: '2021-03-01T21:00Z'
+    location: Q épület (TBA)
     instructors:
-      - Móna Dániel
-  - startDate: '2021-03-09T20:00Z'
-    endDate: '2021-03-09T22:00Z'
-    location: Teams
+      - Révay Regina
+  - startDate: '2021-03-08T18:00Z'
+    endDate: '2021-03-08T20:00Z'
+    location: Q épület (TBA)
     instructors:
-      - Móna Dániel
-  - startDate: '2021-03-16T20:00Z'
-    endDate: '2021-03-16T22:00Z'
-    location: Teams
+      - Révay Regina
+  - startDate: '2021-03-22T18:00Z'
+    endDate: '2021-03-22T20:00Z'
+    location: Q épület (TBA)
     instructors:
-      - Móna Dániel
-  - startDate: '2021-03-23T20:00Z'
-    endDate: '2021-03-23T22:00Z'
-    location: Teams
+      - Révay Regina
+  - startDate: '2021-03-29T18:00Z'
+    endDate: '2021-03-29T20:00Z'
+    location: Q épület (TBA)
     instructors:
-      - Móna Dániel
-  - startDate: '2021-03-30T20:00Z'
-    endDate: '2021-03-30T22:00Z'
-    location: Teams
+      - Révay Regina
+  - startDate: '2021-04-05T18:00Z'
+    endDate: '2021-04-05T20:00Z'
+    location: Q épület (TBA)
     instructors:
-      - Móna Dániel
+      - Révay Regina
 moreInfoURL: https://legokor.hu/tanfolyam/
 applicationFormURL: https://forms.gle/PupuZrxgqA6pZV957
 tags:

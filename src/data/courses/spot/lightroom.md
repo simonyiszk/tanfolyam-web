@@ -1,14 +1,24 @@
 ---
-title: Utómunka Lightroommal 💻🖌️
+title: SPOT - Utómunka Lightroommal 💻🖌️
 society: SPOT
 occasions:
-  - dateText: 5. oktatási hét
-    location: Online
-    instructors:
+  - startDate: '2022-03-16T19:00Z'
+    endDate: '2022-03-16T22:00Z'
+    location: TBA
+    instructors: 
       - Balogh Marcell
-      - Pónya Bence
+  - startDate: '2022-03-17T19:00Z'
+    endDate: '2022-03-17T22:00Z'
+    location: TBA
+    instructors: 
+      - Tóth Marcell Balázs
+  - startDate: '2022-03-22T19:00Z'
+    endDate: '2022-03-22T22:00Z'
+    location: TBA
+    instructors: 
+      - Bujdosó Kata
 moreInfoURL: https://spot.sch.bme.hu/tanfolyam
-applicationFormURL: https://forms.gle/oQs5Z2Gfteq6FJmb9
+applicationFormURL: https://forms.gle/Srk8AWYtzryhc8DW6
 tags:
   - média
 ---

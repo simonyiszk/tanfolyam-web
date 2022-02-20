@@ -163,7 +163,10 @@ export default CoursesPage;
 export const query = graphql`
   query CoursesPageQuery {
     courses: allMarkdownRemark(
-      filter: { fileAbsolutePath: { regex: "/courses/" } }
+      filter: {
+        fileAbsolutePath: { regex: "/courses/" }
+        # frontmatter: { society: { id: { nin: ["schdesign", "AC", "SEM"] } } }
+      }
     ) {
       edges {
         node {

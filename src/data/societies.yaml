@@ -11,12 +11,12 @@
 - id: HA5KFU
   title: HA5KFU rádióamatőr klub
   logo: ./logos/ha5kfu.svg
-  website: http://ha5kfu.hu
+  website: https://ha5kfu.hu
 
 - id: Kir-Dev
   title: KIR fejlesztők és üzemeltetők
   logo: ./logos/kir-dev.svg
-  website: http://kir-dev.sch.bme.hu
+  website: https://kir-dev.sch.bme.hu
 
 - id: LEGO
   title: LEGO kör
@@ -26,7 +26,7 @@
 - id: schdesign
   title: Schönherz Design Stúdió
   logo: ./logos/schdesign.svg
-  website: http://schdesign.hu
+  website: https://schdesign.hu
 
 - id: SEM
   title: Schönherz Elektronikai Műhely

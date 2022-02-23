@@ -7,22 +7,22 @@ occasions:
     location: Q épület (TBA)
     instructors:
       - Révay Regina
-  - startDate: '2021-03-08T18:00Z'
+  - startDate: '2022-03-08T18:00Z'
     endDate: '2021-03-08T20:00Z'
     location: Q épület (TBA)
     instructors:
       - Révay Regina
-  - startDate: '2021-03-22T18:00Z'
+  - startDate: '2022-03-22T18:00Z'
     endDate: '2021-03-22T20:00Z'
     location: Q épület (TBA)
     instructors:
       - Révay Regina
-  - startDate: '2021-03-29T18:00Z'
+  - startDate: '2022-03-29T18:00Z'
     endDate: '2021-03-29T20:00Z'
     location: Q épület (TBA)
     instructors:
       - Révay Regina
-  - startDate: '2021-04-05T18:00Z'
+  - startDate: '2022-04-05T18:00Z'
     endDate: '2021-04-05T20:00Z'
     location: Q épület (TBA)
     instructors:

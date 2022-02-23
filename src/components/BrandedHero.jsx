@@ -12,8 +12,9 @@ const BrandedHero = ({
 }) => (
   <div className={`${styles.root} ${className}`} {...props}>
     <Img sizes={backgroundImage} className={styles.backgroundImage} />
-
-    <img src={heroImageSrc} alt={heroImageAlt} className={styles.heroImage} />
+    <a href="https://simonyi.bme.hu">
+      <img src={heroImageSrc} alt={heroImageAlt} className={styles.heroImage} />
+    </a>
   </div>
 );
 

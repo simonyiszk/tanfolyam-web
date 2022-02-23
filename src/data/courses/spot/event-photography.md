@@ -1,27 +1,24 @@
 ---
-title: Rendezvényfotózás 👩‍🎓📸
+title: SPOT - Rendezvényfotózás 👩‍🎓📸
 society: SPOT
 occasions:
-  - startDate: '2021-03-16T19:00Z'
-    endDate: '2021-03-16T21:00Z'
-    location: Online
-    instructors:
-      - Mihály Szabolcs
-      - Tallósi Máté
-  - startDate: '2021-03-17T19:00Z'
-    endDate: '2021-03-17T21:00Z'
-    location: Online
-    instructors:
-      - Mihály Szabolcs
-      - Tallósi Máté
-  - startDate: '2021-03-18T19:00Z'
-    endDate: '2021-03-18T21:00Z'
-    location: Online
-    instructors:
-      - Mihály Szabolcs
-      - Tallósi Máté
+  - startDate: '2022-03-23T19:00Z'
+    endDate: '2022-03-23T22:00Z'
+    location: TBA
+    instructors: 
+      - Sárközi Daniella
+  - startDate: '2022-03-24T19:00Z'
+    endDate: '2022-03-24T22:00Z'
+    location: TBA
+    instructors: 
+      - Főglein Simon
+  - startDate: '2022-03-25T19:00Z'
+    endDate: '2022-03-25T22:00Z'
+    location: TBA
+    instructors: 
+      - Püspöki Péter
 moreInfoURL: https://spot.sch.bme.hu/tanfolyam
-applicationFormURL: https://forms.gle/oQs5Z2Gfteq6FJmb9
+applicationFormURL: https://forms.gle/Srk8AWYtzryhc8DW6
 tags:
   - média
 ---

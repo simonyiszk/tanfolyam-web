@@ -1,4 +1,5 @@
 {
+  "name": "simonyi-tanfolyam-web",
   "private": true,
   "scripts": {
     "build": "gatsby build --prefix-paths",

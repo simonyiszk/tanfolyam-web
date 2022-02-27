@@ -2,13 +2,13 @@
 title: 3D modellezés tanfolyam
 society: schdesign
 occasions:
-  - startDate: '2021-03-10T19:00Z'
-    endDate: '2021-03-10T21:00Z'
-    location: Discord
-  - startDate: '2021-03-15T19:00Z'
-    endDate: '2021-03-15T21:00Z'
-    location: Discord
-applicationFormURL: https://schdesign.hu/tanfolyam
+  - startDate: '2022-03-10T18:00Z'
+    endDate: '2022-03-10T20:00Z'
+    location: QBF11
+  - startDate: '2022-03-14T18:00Z'
+    endDate: '2022-03-14T20:00Z'
+    location: E404
+applicationFormURL: https://schdesign.hu/#tanfolyam
 tags:
   - design
 ---

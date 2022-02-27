@@ -2,10 +2,12 @@
 title: Design Principles
 society: schdesign
 occasions:
-  - startDate: '2021-02-26T19:00Z'
-    endDate: '2021-02-26T21:00Z'
-    location: Discord
-applicationFormURL: https://schdesign.hu/tanfolyam
+  - startDate: '2022-02-28T18:00Z'
+    endDate: '2022-02-28T20:00Z'
+    location: QBF11
+    instructors:
+      - Balogh Marcell
+applicationFormURL: https://schdesign.hu/#tanfolyam
 tags:
   - design
 ---

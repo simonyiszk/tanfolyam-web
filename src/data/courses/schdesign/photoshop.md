@@ -2,13 +2,13 @@
 title: Photoshop tanfolyam
 society: schdesign
 occasions:
-  - startDate: '2021-02-24T19:00Z'
-    endDate: '2021-02-24T21:00Z'
-    location: Discord
-  - startDate: '2021-03-01T19:00Z'
-    endDate: '2021-03-01T21:00Z'
-    location: Discord
-applicationFormURL: https://schdesign.hu/tanfolyam
+  - startDate: '2022-03-17T18:00Z'
+    endDate: '2022-03-17T20:00Z'
+    location: QBF11
+  - startDate: '2022-03-21T18:00Z'
+    endDate: '2022-03-21T20:00Z'
+    location: E404
+applicationFormURL: https://schdesign.hu/#tanfolyam
 tags:
   - design
 ---

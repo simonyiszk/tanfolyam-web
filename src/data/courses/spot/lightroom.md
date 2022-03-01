@@ -4,18 +4,18 @@ society: SPOT
 occasions:
   - startDate: '2022-03-16T19:00Z'
     endDate: '2022-03-16T22:00Z'
-    location: TBA
-    instructors: 
+    location: E402
+    instructors:
       - Balogh Marcell
   - startDate: '2022-03-17T19:00Z'
     endDate: '2022-03-17T22:00Z'
-    location: TBA
-    instructors: 
+    location: E402
+    instructors:
       - Tóth Marcell Balázs
   - startDate: '2022-03-22T19:00Z'
     endDate: '2022-03-22T22:00Z'
-    location: TBA
-    instructors: 
+    location: E402
+    instructors:
       - Bujdosó Kata
 moreInfoURL: https://spot.sch.bme.hu/tanfolyam
 applicationFormURL: https://forms.gle/Srk8AWYtzryhc8DW6

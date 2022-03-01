@@ -4,18 +4,18 @@ society: SPOT
 occasions:
   - startDate: '2022-03-23T19:00Z'
     endDate: '2022-03-23T22:00Z'
-    location: TBA
-    instructors: 
+    location: E401
+    instructors:
       - Sárközi Daniella
   - startDate: '2022-03-24T19:00Z'
     endDate: '2022-03-24T22:00Z'
-    location: TBA
-    instructors: 
+    location: E402
+    instructors:
       - Főglein Simon
   - startDate: '2022-03-25T19:00Z'
     endDate: '2022-03-25T22:00Z'
-    location: TBA
-    instructors: 
+    location: E402
+    instructors:
       - Püspöki Péter
 moreInfoURL: https://spot.sch.bme.hu/tanfolyam
 applicationFormURL: https://forms.gle/Srk8AWYtzryhc8DW6

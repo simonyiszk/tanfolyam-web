@@ -4,43 +4,43 @@ society: SPOT
 occasions:
   - startDate: '2022-03-01T19:00Z'
     endDate: '2022-03-01T22:00Z'
-    location: TBA
-    instructors: 
+    location: E402
+    instructors:
       - Hódosy Kristóf
   - startDate: '2022-03-02T19:00Z'
     endDate: '2022-03-02T22:00Z'
-    location: TBA
-    instructors: 
+    location: E402
+    instructors:
       - Kőfaragó Nándor
   - startDate: '2022-03-03T19:00Z'
     endDate: '2022-03-03T22:00Z'
-    location: TBA
-    instructors: 
+    location: E405
+    instructors:
       - Tallósi Máté
   - startDate: '2022-03-03T19:00Z'
     endDate: '2022-03-03T22:00Z'
-    location: TBA
-    instructors: 
+    location: E402
+    instructors:
       - Hódosy Kristóf
   - startDate: '2022-03-08T19:00Z'
     endDate: '2022-03-08T22:00Z'
-    location: TBA
-    instructors: 
+    location: E402
+    instructors:
       - Tallósi Máté
   - startDate: '2022-03-08T19:00Z'
     endDate: '2022-03-08T22:00Z'
-    location: TBA
-    instructors: 
+    location: E401
+    instructors:
       - Bogár György Richárd
   - startDate: '2022-03-09T19:00Z'
     endDate: '2022-03-09T22:00Z'
-    location: TBA
-    instructors: 
+    location: E404
+    instructors:
       - Kőfaragó Nándor
   - startDate: '2022-03-09T19:00Z'
     endDate: '2022-03-09T22:00Z'
-    location: TBA
-    instructors: 
+    location: E405
+    instructors:
       - Balogh Marcell
 moreInfoURL: https://spot.sch.bme.hu/tanfolyam
 applicationFormURL: https://forms.gle/Srk8AWYtzryhc8DW6

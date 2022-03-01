@@ -4,33 +4,33 @@ society: SPOT
 occasions:
   - startDate: '2022-03-22T19:00Z'
     endDate: '2022-03-23T22:00Z'
-    location: TBA
-    instructors: 
+    location: SCH 1419
+    instructors:
       - Pónya Bence
   - startDate: '2022-03-23T19:00Z'
     endDate: '2022-03-23T22:00Z'
-    location: TBA
-    instructors: 
+    location: SCH 1419
+    instructors:
       - Bujdosó Kata
   - startDate: '2022-03-24T19:00Z'
     endDate: '2022-03-24T22:00Z'
-    location: TBA
-    instructors: 
+    location: SCH 1419
+    instructors:
       - Révész Zoltán Bálint
   - startDate: '2022-03-29T19:00Z'
     endDate: '2022-03-29T22:00Z'
-    location: TBA
-    instructors: 
+    location: SCH 1419
+    instructors:
       - Pónya Bence
   - startDate: '2022-03-30T19:00Z'
     endDate: '2022-03-30T22:00Z'
-    location: TBA
-    instructors: 
+    location: SCH 1419
+    instructors:
       - Bujdosó Kata
   - startDate: '2022-03-31T19:00Z'
     endDate: '2022-03-31T22:00Z'
-    location: TBA
-    instructors: 
+    location: SCH 1419
+    instructors:
       - Révész Zoltán Bálint
 moreInfoURL: https://spot.sch.bme.hu/tanfolyam
 applicationFormURL: https://forms.gle/Srk8AWYtzryhc8DW6

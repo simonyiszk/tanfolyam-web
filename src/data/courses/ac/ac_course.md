@@ -2,32 +2,38 @@
 title: AC Studio & Live tanfolyam
 society: AC
 occasions:
-  - startDate: '2021-02-23T18:00:00Z'
-    endDate: '2021-02-23T20:00:00Z'
-    location: Google Meet
-  - startDate: '2021-03-02T18:00:00Z'
-    endDate: '2021-03-02T20:00:00Z'
-    location: Google Meet
-  - startDate: '2021-03-09T18:00:00Z'
-    endDate: '2021-03-09T20:00:00Z'
-    location: Google Meet
-  - startDate: '2021-03-16T18:00:00Z'
-    endDate: '2021-03-16T20:00:00Z'
-    location: Google Meet
-  - startDate: '2021-03-23T18:00:00Z'
-    endDate: '2021-03-23T20:00:00Z'
-    location: Google Meet
-  - startDate: '2021-03-30T18:00:00Z'
-    endDate: '2021-03-30T20:00:00Z'
-    location: Google Meet
-  - startDate: '2021-04-13T18:00:00Z'
-    endDate: '2021-04-13T20:00:00Z'
-    location: Google Meet
+  - startDate: '2022-03-01T18:00:00Z'
+    endDate: '2022-03-01T20:00:00Z'
+    location: SCH FNT
+  - startDate: '2022-03-08T18:00:00Z'
+    endDate: '2022-03-08T20:00:00Z'
+    location: QBF11
+  - startDate: '2022-03-16T18:00:00Z'
+    endDate: '2022-03-16T20:00:00Z'
+    location: E404
+  - startDate: '2022-03-22T18:00:00Z'
+    endDate: '2022-03-22T20:00:00Z'
+    location: QBF11
+  - startDate: '2022-03-29T18:00:00Z'
+    endDate: '2022-03-29T20:00:00Z'
+    location: QBF11
+  - startDate: '2022-04-05T18:00:00Z'
+    endDate: '2022-04-05T20:00:00Z'
+    location: SCH 102
+  - startDate: '2022-04-12T18:00:00Z'
+    endDate: '2022-04-12T20:00:00Z'
+    location: SCH 102
+  - startDate: '2022-04-20T18:00:00Z'
+    endDate: '2022-04-20T20:00:00Z'
+    location: SCH 102
     instructors:
       - Zámolyi Csaba
-      - Rácz Dorina
+      - Kis Ákos
       - Kovács Kristóf
       - Sinkó Péter
+      - Móna Dániel
+      - Balla Dániel
+      - Marosi Dániel
 moreInfoURL: https://acstudio.sch.bme.hu/tanfolyam
 applicationFormURL: http://bit.ly/actanfolyam
 tags:
@@ -35,4 +41,8 @@ tags:
   - stúdió
 ---
 
-Tanfolyamunk során megismerkedhetsz a hangtechnika fizikai alapjaival, a keverőpultok, effektek, mikrofonok fajtáival, működésével és használatával, egy nagyobb rendezvény lebonyolításához szükséges rendszer felépítésével, és a fénytechnikában használatos eszközökkel is. A live hang- és fénytechnikán kívül a stúdiótechnikába is betekintést nyerhetsz.
+Szereted mikor egy koncerten a mellkasodban érzed a basszust, és elkápráztat a fények játéka? Ha érdekel hogy áll össze egy igazi show technikai része, mi megmutatjuk neked! Most induló tanfolyamunkon feltárjuk számodra az élő események hang- és fénytechnikáját, és rápillantunk hogyan készülnek a felvételek a stúdióban.
+
+Részletesebben: Megismertetünk a hangtechnika fizikai alapjaival. Bemutatjuk neked milyen sok féle-fajta mikrofon van és mikor melyiket érdemes használni. Láthatod majd az embermagasságú effektes racket is és megtudhatod, hogy melyik eszköz mit csinál benne. A stúdióban rejtőző finomságokat is megízlelheted, technikai értelemben. A-Z-ig elmeséljük az összes potmétert a keverőpultokon! Szó lesz a korábban említett mellkas-kalapáló szerszámokról is a rendszertechnikán, a fénytechnikánál pedig láthatod majd mitől káprázik a szemed.
+
+Annyit tanulsz tőlünk amennyit szeretnél! Véleményünk szerint a tanfolyam nem ér véget az előadásnál, ezért igyekszünk minél több lehetőséget biztosítani mind rendezvények, mind workshopok, gyakorlati alkalmak során, hogy valóban elsajátíthasd, és gyakorolhasd ezt a szép szakmát.

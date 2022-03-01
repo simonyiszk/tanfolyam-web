@@ -2,49 +2,30 @@
 title: Alapozó elektronikai tanfolyam
 society: SEM
 occasions:
-  - startDate: '2021-02-22T19:00Z'
-    endDate: '2021-02-22T21:00Z'
-    location: Teams
+  - startDate: '2022-03-07T18:00Z'
+    endDate: '2022-03-07T20:00Z'
+    location: QBF11
+  - startDate: '2022-03-09T18:00Z'
+    endDate: '2022-03-09T20:00Z'
+    location: QBF11
+  - startDate: '2022-03-14T18:00Z'
+    endDate: '2022-03-14T20:00Z'
+    location: QBF11
+  - startDate: '2022-03-16T18:00Z'
+    endDate: '2022-03-16T20:00Z'
+    location: QBF11
+  - startDate: '2022-03-21T18:00Z'
+    endDate: '2022-03-21T20:00Z'
+    location: QBF11
     instructors:
-      - Illés Tibor
-      - Weisz Pál
+      - Frey Balázs
+      - Boros Balázs
       - Várkonyi Kornél
-      - Fábián Bence
-  - startDate: '2021-03-01T19:00Z'
-    endDate: '2021-03-01T21:00Z'
-    location: Teams
-    instructors:
-      - Illés Tibor
-      - Weisz Pál
-      - Várkonyi Kornél
-      - Fábián Bence
-  - startDate: '2021-03-08T19:00Z'
-    endDate: '2021-03-08T21:00Z'
-    location: Teams
-    instructors:
-      - Illés Tibor
-      - Weisz Pál
-      - Várkonyi Kornél
-      - Fábián Bence
-  - startDate: '2020-03-15T17:00Z'
-    endDate: '2020-03-15T19:00Z'
-    location: Teams
-    instructors:
-      - Illés Tibor
-      - Weisz Pál
-      - Várkonyi Kornél
-      - Fábián Bence
-  - startDate: '2020-03-22T19:00Z'
-    endDate: '2020-03-22T21:00Z'
-    location: Teams
-    instructors:
-      - Illés Tibor
-      - Weisz Pál
-      - Várkonyi Kornél
-      - Fábián Bence
+      - Fraknói Tamás
 moreInfoURL: https://sem.sch.bme.hu/tanfolyam/
 tags:
   - elektronika
   - programozás
 ---
+
 Mint minden tavaszi félévben, idén is megrendezésre kerül az elektronikai alapozó tanfolyam. A tanfolyam keretein belül elsajátíthatók az alapvető analóg elektronikai skillek, valamint a mikrokontrolleres ismeretek. A tanfolyam során a tervező asztaltól a forrasztáson át a programozásig, a tervezés összes lépését bemutatjuk Nektek.

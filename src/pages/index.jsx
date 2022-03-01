@@ -165,7 +165,7 @@ export const query = graphql`
     courses: allMarkdownRemark(
       filter: {
         fileAbsolutePath: { regex: "/courses/" }
-        # frontmatter: { society: { id: { nin: ["schdesign", "AC", "SEM"] } } }
+        # frontmatter: { society: { id: { nin: ["AC", "SEM"] } } }
       }
     ) {
       edges {

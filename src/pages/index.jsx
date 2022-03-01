@@ -94,7 +94,7 @@ class CoursesPage extends React.Component {
               <div className={styles.headerImageContainer}>
                 <img src={Bulb} alt="Tanfolyamok" />
               </div>
-              <div>Ajánlott tanfolyamok</div>
+              <div>2022-es tanfolyamaink</div>
             </h2>
 
             <div className={styles.buttonContainer}>
